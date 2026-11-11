@@ -1,0 +1,1069 @@
+/* ==========================================================================
+   MALLIRIS.GR — redesign sample · theme.css
+   Tokens + layout + components (header, mega-menu, hero, banners, cards,
+   brands, footer). Desktop-first, breakpoints at 1200 / 992 / 768 / 576.
+   ========================================================================== */
+
+:root{
+  /* palette */
+  --bg-900:#16181C;
+  --bg-800:#1E2126;
+  --bg-700:#2A2E35;
+  --text:#F2F3F5;
+  --muted:#9AA0A8;
+  --accent:#2E7D9A;
+  --accent-hover:#3A95B5;
+  --success:#3FBF7F;
+  --warn:#E0A33B;
+  --danger:#D9534F;
+
+  /* product page exception (used by product.html) */
+  --bg-product:#7A7D82;
+  --bg-product-card:#8C8F94;
+  --text-product:#F7F7F7;
+
+  /* shape */
+  --radius:8px;
+  --border:1px solid var(--bg-700);
+  --header-h:104px;
+  --container:1320px;
+
+  /* bootstrap overrides */
+  --bs-body-bg:var(--bg-900);
+  --bs-body-color:var(--text);
+  --bs-border-color:var(--bg-700);
+  --bs-primary:var(--accent);
+  --bs-link-color:var(--accent);
+  --bs-link-hover-color:var(--accent-hover);
+  --bs-font-sans-serif:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bs-body-font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg-900);
+  color:var(--text);
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:var(--container)}
+::selection{background:var(--accent);color:#fff}
+
+/* ---------------------------------------------------------------- buttons */
+.btn-accent{
+  background:var(--accent);border:1px solid var(--accent);color:#fff;
+  font-weight:600;padding:.7rem 1.5rem;border-radius:var(--radius);
+  display:inline-flex;align-items:center;gap:.5rem;transition:.18s ease;
+}
+.btn-accent:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff}
+.btn-outline-light-2{
+  background:transparent;border:1px solid var(--bg-700);color:var(--text);
+  font-weight:500;padding:.7rem 1.5rem;border-radius:var(--radius);
+  display:inline-flex;align-items:center;gap:.5rem;transition:.18s ease;
+}
+.btn-outline-light-2:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ------------------------------------------------------------- placeholders */
+.ph{
+  background:var(--bg-700);
+  border:2px dashed #4A505A;
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px;
+}
+
+/* ------------------------------------------------------------------ header */
+.site-header{
+  background:var(--bg-800);
+  border-bottom:var(--border);
+  position:sticky;top:0;z-index:1000;
+}
+.header-row{
+  display:flex;align-items:center;gap:24px;
+  min-height:88px;
+}
+.header-logo img{width:158px;height:auto;border-radius:2px}
+.main-nav{display:flex;align-items:center;gap:28px;margin-left:8px}
+.nav-link{
+  color:var(--text);font-weight:400;font-size:15px;
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 0;position:relative;background:none;border:0;
+}
+.nav-link::after{
+  content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;
+  transition:transform .18s ease;
+}
+.nav-link:hover,.nav-item:hover>.nav-link{color:var(--text)}
+.nav-link:hover::after,.nav-item:hover>.nav-link::after{transform:scaleX(1)}
+.nav-link .bi{font-size:11px;color:var(--muted)}
+
+/* mega menu */
+.nav-item{position:relative}
+.mega-menu{
+  position:absolute;left:-24px;top:calc(100% + 18px);
+  width:min(980px,92vw);
+  background:var(--bg-800);
+  border:var(--border);
+  border-radius:var(--radius);
+  padding:26px 28px;
+  display:none;
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+.nav-item.has-mega:hover .mega-menu,
+.nav-item.has-mega:focus-within .mega-menu,
+.nav-item.has-mega.is-open .mega-menu{display:block}
+.site-header.is-scrolled{box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.mega-menu::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px 26px}
+.mega-item{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 6px;color:var(--text);font-size:13.5px;font-weight:500;
+  letter-spacing:.02em;border-radius:6px;transition:.15s ease;
+}
+.mega-item .bi{font-size:16px;color:var(--muted);width:20px;text-align:center}
+.mega-item span{border-bottom:1px solid transparent;transition:.15s ease}
+.mega-item:hover{background:rgba(46,125,154,.12);color:var(--text)}
+.mega-item:hover .bi{color:var(--accent)}
+.mega-item:hover span{border-bottom-color:var(--accent)}
+
+/* search */
+.header-search{flex:1 1 auto;max-width:420px;margin-left:auto}
+.header-search .search-wrap{
+  display:flex;align-items:center;gap:8px;
+  background:var(--bg-900);border:var(--border);border-radius:var(--radius);
+  padding:0 12px;height:44px;
+}
+.header-search input{
+  background:none;border:0;outline:none;color:var(--text);
+  font-size:13px;width:100%;
+}
+.header-search input::placeholder{color:var(--muted)}
+.header-search .bi{color:var(--muted);font-size:15px}
+.header-icons{display:flex;align-items:center;gap:6px}
+.icon-btn{
+  position:relative;width:44px;height:44px;border-radius:var(--radius);
+  display:inline-flex;align-items:center;justify-content:center;
+  background:transparent;border:1px solid transparent;color:var(--text);
+  cursor:pointer;transition:.15s ease;
+}
+.icon-btn .bi{font-size:19px}
+.icon-btn:hover{border-color:var(--bg-700);color:var(--accent)}
+.icon-btn .count{
+  position:absolute;top:4px;right:4px;min-width:16px;height:16px;
+  border-radius:8px;background:var(--accent);color:#fff;font-size:10px;
+  font-weight:600;display:flex;align-items:center;justify-content:center;
+}
+.nav-toggle{display:none}
+
+/* -------------------------------------------------------------------- hero */
+.hero{
+  position:relative;height:520px;overflow:hidden;
+  display:flex;align-items:center;
+  border-bottom:var(--border);
+}
+.hero .ph{position:absolute;inset:0;border-radius:0;border:2px dashed #4A505A}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(10,12,14,.88) 0%,rgba(10,12,14,.72) 45%,rgba(10,12,14,.35) 100%);
+}
+.hero-content{position:relative;z-index:2;max-width:640px}
+.hero-content h1{
+  font-size:46px;line-height:1.14;font-weight:700;letter-spacing:-.02em;margin:0 0 18px;
+}
+.hero-content p{color:#CFD3D9;font-size:17px;margin:0 0 28px;max-width:520px}
+
+/* ---------------------------------------------------------- info banners */
+.info-banners{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  padding:48px 0;
+}
+.info-banner{
+  position:relative;height:180px;overflow:hidden;
+  border:var(--border);border-radius:var(--radius);
+  background:var(--bg-800);
+}
+.info-banner .ph{position:absolute;inset:0;border-radius:0;border:2px dashed #4A505A;font-size:9px;align-items:flex-end;justify-content:flex-end;padding:0 10px 7px 0;opacity:.55}
+.info-banner::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(22,24,28,.94),rgba(22,24,28,.62));
+}
+.ib-body{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:22px 24px;gap:4px}
+.ib-body .ib-icon{
+  width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(46,125,154,.16);color:var(--accent);margin-bottom:8px;
+}
+.ib-body .ib-icon .bi{font-size:16px}
+.ib-body h3{font-size:16px;font-weight:600;margin:0}
+.ib-body p{font-size:12.5px;color:var(--muted);margin:0}
+
+/* ------------------------------------------- home: categories + products */
+.cat-products{padding:8px 0 56px}
+.section-title{font-size:24px;font-weight:700;letter-spacing:-.01em;margin:0 0 22px}
+.cat-panel{
+  position:relative;border:var(--border);border-radius:var(--radius);
+  overflow:hidden;padding:22px 18px;display:flex;flex-direction:column;min-height:100%;
+}
+.cat-panel .ph{position:absolute;inset:0;border-radius:0;border:2px dashed #4A505A;align-items:flex-end;padding-bottom:9px;font-size:10px;opacity:.75}
+.cat-panel::after{content:"";position:absolute;inset:0;background:rgba(12,14,17,.80)}
+.cat-panel>*:not(.ph){position:relative;z-index:2}
+.cat-panel{padding-bottom:40px}
+.cat-panel__title{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.cat-list{list-style:none;padding:0;margin:0;flex:1}
+.cat-list a{
+  display:flex;align-items:center;gap:9px;
+  padding:5px 0;color:var(--text);font-size:12.5px;font-weight:500;letter-spacing:.01em;
+}
+.cat-list .bi{font-size:14px;color:var(--muted);width:18px;text-align:center;flex:none}
+.cat-list a span{border-bottom:1px solid transparent;transition:.15s ease}
+.cat-list a:hover{color:var(--text)}
+.cat-list a:hover .bi{color:var(--accent)}
+.cat-list a:hover span{border-bottom-color:var(--accent)}
+.cat-panel .btn-accent{justify-content:center;width:100%;margin-top:16px;font-size:13px;padding:.65rem 1rem}
+
+/* tabs */
+.pv-tabs{display:flex;gap:6px;border-bottom:var(--border);margin-bottom:24px}
+.pv-tabs .nav-link{
+  font-size:15px;font-weight:500;color:var(--muted);
+  padding:10px 16px;border:0;border-bottom:2px solid transparent;border-radius:0;
+}
+.pv-tabs .nav-link::after{display:none}
+.pv-tabs .nav-link:hover{color:var(--text)}
+.pv-tabs .nav-link.active{color:var(--text);border-bottom-color:var(--accent)}
+
+/* ---------------------------------------------------------- product card */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{
+  background:var(--bg-800);border:var(--border);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.18s ease;
+}
+.product-card:hover{border-color:#3A4048;transform:translateY(-2px)}
+.pc-media{background:#fff;display:block;aspect-ratio:1/1;overflow:hidden}
+.pc-media img{width:100%;height:100%;object-fit:contain;padding:14px}
+.pc-body{padding:14px 14px 12px;display:flex;flex-direction:column;flex:1}
+.pc-brand{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.pc-title{
+  font-size:13px;font-weight:500;line-height:1.42;margin:0 0 10px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:55px;
+}
+.pc-title a{color:var(--text)}
+.pc-title a:hover{color:var(--accent)}
+.pc-stock{display:flex;align-items:center;gap:6px;font-size:11.5px;margin-bottom:12px}
+.dot{width:7px;height:7px;border-radius:50%;flex:none;display:inline-block}
+.dot-success{background:var(--success)}
+.dot-warn{background:var(--warn)}
+.dot-danger{background:var(--danger)}
+.stock-success{color:var(--success)}
+.stock-warn{color:var(--warn)}
+.stock-danger{color:var(--danger)}
+.pc-footer{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.pc-prices{display:flex;flex-direction:column;gap:2px}
+.pc-old{font-size:12px;color:var(--muted);text-decoration:line-through;white-space:nowrap}
+.price-line{display:flex;align-items:center;gap:6px}
+.pc-new{font-size:17px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.pc-actions{display:flex;gap:4px}
+.pc-actions .icon-btn{width:34px;height:34px;border:var(--border)}
+.pc-actions .icon-btn .bi{font-size:15px}
+.badge-discount{
+  background:var(--danger);color:#fff;font-size:10.5px;font-weight:700;
+  padding:2px 6px;border-radius:4px;line-height:1.4;
+}
+
+/* -------------------------------------------------------------- brands */
+.brands-section{padding:8px 0 56px}
+.brands-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--bg-800);border:var(--border);border-radius:var(--radius);overflow:hidden}
+.brand-cell{
+  background:var(--bg-800);height:112px;display:flex;align-items:center;justify-content:center;
+  padding:18px 22px;transition:.18s ease;
+  border-right:1px solid var(--bg-700);border-bottom:1px solid var(--bg-700);
+}
+.brand-cell img{
+  max-height:52px;max-width:100%;width:auto;object-fit:contain;
+  filter:grayscale(1) brightness(1.6);opacity:.85;transition:.2s ease;
+}
+.brand-cell:hover img{filter:none;opacity:1}
+
+/* ------------------------------------------------------------------ footer */
+.site-footer{background:var(--bg-800);border-top:var(--border);margin-top:8px}
+.footer-main{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding:52px 0 42px}
+.footer-logo img{width:158px;margin-bottom:18px}
+.footer-about{font-size:12.5px;color:var(--muted);line-height:1.7;max-width:280px}
+.footer-col h4{
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  font-weight:600;margin:0 0 14px;
+}
+.footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.footer-col a{color:var(--text);font-size:13px;opacity:.85}
+.footer-col a:hover{color:var(--accent);opacity:1}
+.footer-contact{font-size:13px;color:#CFD3D9;display:flex;flex-direction:column;gap:9px}
+.footer-contact .bi{color:var(--accent);margin-right:7px}
+.footer-bottom{
+  border-top:var(--border);padding:18px 0;font-size:12px;color:var(--muted);
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+.footer-pay{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:11px}
+
+/* ------------------------------------------------------------ responsive */
+@media (max-width:1400px){
+  :root{--container:1200px}
+  .mega-menu{width:min(860px,94vw)}
+}
+@media (max-width:1199px){
+  .hero-content h1{font-size:38px}
+  .product-grid{grid-template-columns:repeat(3,1fr)}
+  .brands-grid{grid-template-columns:repeat(4,1fr)}
+  .footer-main{grid-template-columns:1fr 1fr;gap:32px}
+  .header-search{max-width:300px}
+}
+@media (max-width:991px){
+  .header-search{display:none}
+  .main-nav{gap:18px}
+  .mega-menu{width:min(92vw,720px)}
+  .mega-grid{grid-template-columns:repeat(3,1fr)}
+  .hero{height:440px}
+  .hero-content h1{font-size:32px}
+  .info-banners{grid-template-columns:1fr;gap:16px;padding:32px 0}
+  .info-banner{height:150px}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .brands-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:767px){
+  .header-row{min-height:72px;gap:10px}
+  .header-logo img{width:122px}
+  .main-nav{display:none}
+  .nav-toggle{display:inline-flex}
+  .hero{height:380px}
+  .hero-content h1{font-size:26px}
+  .hero-content p{font-size:14px}
+  .section-title{font-size:20px}
+  .cat-panel{min-height:auto;max-height:340px;overflow:auto}
+  .footer-main{grid-template-columns:1fr;gap:26px;padding:36px 0}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:575px){
+  .product-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .pc-title{min-height:auto;font-size:12px}
+  .brands-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-cell{height:88px;padding:12px}
+  .hero-content h1{font-size:23px}
+}
+
+/* =========================================================================
+   TASK 2 — category.html (μόνο προσθήκες, δεν αλλάζει τίποτα από πάνω)
+   ========================================================================= */
+.cat-header{
+  position:relative;height:240px;display:flex;align-items:center;
+  border-bottom:var(--border);overflow:hidden;
+}
+.cat-header .ph{position:absolute;inset:0;border-radius:0;border:2px dashed #4A505A;align-items:flex-end;justify-content:flex-end;padding:0 14px 10px 0;font-size:10px;opacity:.5}
+.cat-header::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(10,12,14,.90) 0%,rgba(10,12,14,.62) 55%,rgba(10,12,14,.42) 100%);
+}
+.cat-header .container{position:relative;z-index:2}
+.cat-breadcrumb ol{list-style:none;display:flex;gap:8px;padding:0;margin:0 0 10px;font-size:12.5px;color:var(--muted)}
+.cat-breadcrumb li{display:flex;align-items:center;gap:8px}
+.cat-breadcrumb li+li::before{content:"/";color:#5C626B}
+.cat-breadcrumb a{color:var(--muted)}
+.cat-breadcrumb a:hover{color:var(--accent)}
+.cat-breadcrumb li[aria-current]{color:var(--text)}
+.cat-header__title{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:0}
+
+.cat-body{padding:36px 0 56px}
+
+.filters{background:var(--bg-800);border:var(--border);border-radius:var(--radius);padding:20px 18px}
+.filters__title{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 16px}
+.filter-block+.filter-block{margin-top:14px;border-top:var(--border);padding-top:14px}
+.filter-check{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text);cursor:pointer;margin:0;padding:2px 0}
+.filter-check em{color:var(--muted);font-style:normal}
+.filter-check input{
+  appearance:none;-webkit-appearance:none;width:16px;height:16px;flex:none;
+  border:1px solid #4A505A;border-radius:3px;background:var(--bg-900);position:relative;cursor:pointer;
+}
+.filter-check input:checked{background:var(--accent);border-color:var(--accent)}
+.filter-check input:checked::after{
+  content:"";position:absolute;left:4px;top:1px;width:5px;height:9px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);
+}
+.filter-accordion .accordion-item{background:none;border:0;border-radius:0}
+.filter-accordion .accordion-button{
+  background:none;color:var(--text);font-size:13px;font-weight:500;
+  padding:0 0 10px;box-shadow:none;border:0;
+}
+.filter-accordion .accordion-button:not(.collapsed){background:none;color:var(--text);box-shadow:none}
+.filter-accordion .accordion-button:focus{box-shadow:none;border:0}
+.filter-accordion .accordion-button::after{width:14px;height:14px;background-size:14px;filter:invert(.65)}
+.filter-accordion .accordion-body{padding:0}
+
+.listing-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.listing-count{font-size:13px;color:var(--muted);margin:0}
+.listing-count strong{color:var(--text);font-weight:600}
+.listing-sort select{
+  background:var(--bg-800);border:var(--border);color:var(--text);
+  font-size:13px;min-width:220px;border-radius:var(--radius);
+}
+.listing-sort select:focus{border-color:var(--accent);box-shadow:none;background:var(--bg-800);color:var(--text)}
+
+@media (max-width:991px){
+  .cat-header{height:200px}
+  .cat-header__title{font-size:30px}
+  .cat-body{padding:26px 0 40px}
+}
+@media (max-width:767px){
+  .listing-toolbar{flex-direction:column;align-items:flex-start;gap:10px}
+  .listing-sort,.listing-sort select{width:100%}
+  .cat-header__title{font-size:26px}
+}
+
+/* =========================================================================
+   TASK 3 — product.html (μόνο προσθήκες)
+   Ανοιχτότερο background μόνο στη σελίδα προϊόντος· header/footer παραμένουν σκούρα.
+   ========================================================================= */
+.page-product{
+  background:var(--bg-product);
+  color:var(--text-product);
+}
+.page-product main{padding-bottom:8px}
+.page-product .product-card{background:var(--bg-product-card);border-color:#70747A}
+.page-product .product-card:hover{border-color:#9A9EA4}
+.page-product .pc-title a,.page-product .pc-new{color:var(--text-product)}
+.page-product .pc-brand,.page-product .pc-old{color:#E4E6E9}
+
+/* breadcrumb */
+.pp-breadcrumb{padding:18px 0 0}
+.pp-breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;font-size:12.5px;color:#E4E6E9}
+.pp-breadcrumb li{display:flex;align-items:center;gap:8px}
+.pp-breadcrumb li+li::before{content:"/";color:#5F6369}
+.pp-breadcrumb a{color:#E4E6E9}
+.pp-breadcrumb a:hover{color:#fff}
+.pp-breadcrumb li[aria-current]{color:#fff}
+
+/* δύο στήλες */
+.pp-main{padding:22px 0 44px}
+.pp-gallery{position:sticky;top:112px}
+.pp-main-img{
+  background:#fff;border-radius:var(--radius);border:1px solid #70747A;
+  aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.pp-main-img img{width:100%;height:100%;object-fit:contain;padding:18px}
+.pp-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.pp-thumb{
+  background:#fff;border:1px solid #70747A;border-radius:6px;padding:0;cursor:pointer;
+  aspect-ratio:1/1;overflow:hidden;transition:.15s ease;
+}
+.pp-thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
+.pp-thumb:hover{border-color:#fff}
+.pp-thumb.is-active{border-color:#fff;box-shadow:0 0 0 1px #fff inset}
+.pp-360{
+  display:inline-flex;align-items:center;gap:8px;margin-top:12px;
+  font-size:12.5px;color:#fff;border-bottom:1px dashed #C8CBCF;padding-bottom:2px;
+}
+.pp-360:hover{color:#fff;border-bottom-color:#fff}
+
+/* δεξιά στήλη */
+.pp-title{font-size:24px;line-height:1.28;font-weight:700;letter-spacing:-.01em;margin:0 0 10px;color:#fff}
+.pp-stock{display:flex;align-items:center;gap:7px;font-size:13px;color:#FFD08A;margin:0 0 16px}
+.pp-brandline{
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  padding:10px 0 14px;border-top:1px solid #6E7176;border-bottom:1px solid #6E7176;margin-bottom:20px;
+}
+.pp-brand-logo{background:#fff;border-radius:4px;padding:5px 8px;display:inline-flex;align-items:center;height:44px}
+.pp-brand-logo img{height:34px;width:auto;object-fit:contain}
+.pp-brandline .txt{font-size:13.5px;color:#fff;font-weight:600;letter-spacing:.04em}
+.pp-brandline .sep{color:#C8CBCF}
+.pp-brandline .code{font-size:13.5px;color:#E4E6E9}
+.pp-brandline .code strong{color:#fff;font-weight:600}
+.pp-wish{
+  margin-left:auto;width:40px;height:40px;border:1px solid #70747A;border-radius:var(--radius);
+  background:rgba(255,255,255,.06);color:#fff;
+}
+.pp-wish:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.12)}
+
+/* άλλοι κατασκευαστές */
+.pp-others{margin-bottom:20px}
+.pp-others h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#EDEFF1;margin:0 0 10px;font-weight:600}
+.pp-others-row{
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  background:rgba(255,255,255,.07);border:1px solid #70747A;border-radius:var(--radius);padding:10px 12px;
+}
+.pp-brand-chip{
+  background:#fff;border-radius:4px;height:38px;min-width:64px;padding:4px 8px;
+  display:inline-flex;align-items:center;justify-content:center;transition:.15s ease;
+}
+.pp-brand-chip img{height:24px;width:auto;max-width:74px;object-fit:contain;filter:grayscale(1) brightness(1.05)}
+.pp-brand-chip:hover img{filter:none}
+
+/* accordion χαρακτηριστικών */
+.pp-acc .accordion-item{background:rgba(255,255,255,.06);border:1px solid #70747A;border-radius:var(--radius);overflow:hidden}
+.pp-acc .accordion-button{
+  background:transparent;color:#fff;font-size:13.5px;font-weight:600;
+  padding:13px 16px;box-shadow:none;border:0;
+}
+.pp-acc .accordion-button:not(.collapsed){background:rgba(255,255,255,.05);color:#fff;box-shadow:none}
+.pp-acc .accordion-button:focus{box-shadow:none}
+.pp-acc .accordion-button::after{filter:invert(1)}
+.pp-acc .accordion-body{padding:4px 16px 16px}
+.pp-attrs{width:100%;border-collapse:collapse;font-size:13px}
+.pp-attrs th,.pp-attrs td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.14);text-align:left;vertical-align:top}
+.pp-attrs th{color:#EDEFF1;font-weight:500;width:42%}
+.pp-attrs td{color:#fff}
+.pp-attrs tr:last-child th,.pp-attrs tr:last-child td{border-bottom:0}
+.pp-oe-title{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#EDEFF1;margin:14px 0 8px;font-weight:600}
+.oe-codes{
+  list-style:none;margin:0;padding:0;
+  column-width:110px;column-count:4;column-gap:14px;
+  font-size:12.5px;color:#fff;
+}
+.oe-codes li{padding:3px 0;break-inside:avoid;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* αποστολή */
+.ship-box{background:#F2F3F5;border-radius:var(--radius);padding:16px;margin:18px 0;color:#1B1D21}
+.ship-box h3{font-size:13px;font-weight:600;margin:0 0 12px;color:#1B1D21}
+.ship-form{display:grid;grid-template-columns:1fr 120px;gap:10px}
+.ship-form select,.ship-form input{
+  height:40px;border:1px solid #C9CDD2;border-radius:6px;background:#fff;color:#1B1D21;
+  font-size:13px;padding:0 10px;width:100%;
+}
+.ship-form button{
+  grid-column:1/-1;height:40px;border:0;border-radius:6px;background:var(--accent);color:#fff;
+  font-size:13px;font-weight:600;cursor:pointer;transition:.15s ease;
+}
+.ship-form button:hover{background:var(--accent-hover)}
+
+/* τιμή + αγορά */
+.pp-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:6px 0 16px}
+.pp-price .old{font-size:15px;color:#E4E6E9;text-decoration:line-through}
+.pp-price .new{font-size:36px;font-weight:700;letter-spacing:-.02em;color:#fff;line-height:1}
+.pp-buy{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.pp-qty{display:flex;align-items:center;gap:10px;font-size:13px;color:#EDEFF1}
+.pp-qty input{
+  width:74px;height:40px;border:1px solid #70747A;border-radius:6px;background:rgba(255,255,255,.9);
+  color:#1B1D21;text-align:center;font-size:14px;font-weight:600;
+}
+.pp-qty .unit{color:#fff;font-size:13px;letter-spacing:.04em}
+.pp-buy .btn-accent{width:100%;justify-content:center;height:48px;font-size:14.5px}
+.pp-info-items{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.pp-info-items span{display:flex;align-items:center;gap:9px;font-size:12.5px;color:#EDEFF1}
+.pp-info-items .bi{color:#fff;font-size:15px}
+.btn-outline-dark-2{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;height:44px;
+  border:1px solid #fff;border-radius:var(--radius);background:transparent;color:#fff;
+  font-size:13.5px;font-weight:500;transition:.15s ease;
+}
+.btn-outline-dark-2:hover{background:#fff;color:#2A2E35}
+
+/* Q&A */
+.qa{padding:40px 0 8px;border-top:1px solid rgba(255,255,255,.18);margin-top:8px}
+.qa h2{font-size:22px;font-weight:700;margin:0 0 18px;color:#fff}
+.qa-item{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.qa-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.qa-avatar{
+  width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.85);color:#2A2E35;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none;
+}
+.qa-meta{font-size:12px;color:#E4E6E9}
+.qa-meta strong{color:#fff;font-weight:600;display:block;font-size:12.5px}
+.qa-q{font-size:13.5px;color:#fff;margin:0 0 10px}
+.qa-answer{
+  margin-left:42px;background:rgba(255,255,255,.10);border-left:3px solid var(--accent);
+  border-radius:0 6px 6px 0;padding:10px 14px;font-size:13px;color:#fff;
+}
+.qa-answer .who{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;color:#fff;margin-bottom:3px}
+.qa-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+.qa-actions .btn-outline-dark-2{width:auto;padding:0 20px}
+.qa-note{font-size:11.5px;color:#E4E6E9}
+
+/* carousels */
+.pp-carousel{padding:36px 0 4px}
+.pp-carousel-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.pp-carousel-head h2{font-size:20px;font-weight:700;margin:0;color:#fff}
+.car-arrows{display:flex;gap:6px}
+.car-arrows button{
+  width:36px;height:36px;border-radius:50%;border:1px solid #fff;background:transparent;color:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s ease;
+}
+.car-arrows button:hover{background:#fff;color:#2A2E35}
+.car-track{
+  display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;
+  scrollbar-width:thin;
+}
+.car-track::-webkit-scrollbar{height:6px}
+.car-track::-webkit-scrollbar-thumb{background:rgba(255,255,255,.4);border-radius:3px}
+.car-track .product-card{flex:0 0 250px;scroll-snap-align:start}
+
+@media (max-width:1199px){
+  .pp-title{font-size:21px}
+  .pp-price .new{font-size:31px}
+  .oe-codes{column-count:3}
+}
+@media (max-width:991px){
+  .pp-gallery{position:static;margin-bottom:22px}
+  .pp-carousel .car-track .product-card{flex:0 0 220px}
+}
+@media (max-width:767px){
+  .pp-title{font-size:19px}
+  .pp-price .new{font-size:28px}
+  .oe-codes{column-count:2;column-width:auto}
+  .ship-form{grid-template-columns:1fr}
+  .pp-carousel-head h2{font-size:17px}
+  .car-track .product-card{flex:0 0 78%}
+}
+/* =========================================================================
+   v2 — ΦΑΣΗ Α: HEADER (κοινό σε index / category / product)
+   Νέο λογότυπο, ψηλότερο header, mega-menu «Κατασκευαστές»,
+   mega-menu «Προϊόντα» πλήρους πλάτους. Μόνο προσθήκες.
+   ========================================================================= */
+.site-header .header-row{min-height:112px;gap:22px}
+.header-logo{display:inline-flex;align-items:center}
+.header-logo img{height:74px;width:auto;max-width:none;border-radius:0}
+
+/* triggers που ανοίγουν τα panels */
+.nav-trigger{
+  background:none;border:0;color:var(--text);font-size:15px;font-weight:400;
+  display:inline-flex;align-items:center;gap:6px;padding:10px 0;position:relative;cursor:pointer;
+}
+.nav-trigger::after{
+  content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;transition:transform .18s ease;
+}
+.nav-trigger:hover::after,.nav-trigger.is-open::after{transform:scaleX(1)}
+.nav-trigger .bi{font-size:11px;color:var(--muted);transition:transform .18s ease}
+.nav-trigger.is-open .bi{transform:rotate(180deg);color:var(--accent)}
+
+.btn-products{
+  display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;
+  border:1px solid var(--accent);border-radius:var(--radius);
+  background:rgba(46,125,154,.16);color:#fff;font-size:13.5px;font-weight:600;
+  cursor:pointer;transition:.16s ease;white-space:nowrap;
+}
+.btn-products:hover,.btn-products.is-open{background:var(--accent);border-color:var(--accent)}
+.btn-products .bi{font-size:14px}
+
+/* ---------- mega «Κατασκευαστές» ---------- */
+.mega-brands{
+  position:absolute;left:0;right:0;top:100%;z-index:990;
+  background:var(--bg-800);border-top:1px solid var(--bg-700);border-bottom:1px solid var(--bg-700);
+  box-shadow:0 22px 44px rgba(0,0,0,.5);display:none;
+}
+.mega-brands.is-open{display:block;animation:mpFade .18s ease}
+.mb-inner{max-width:var(--container);margin:0 auto;padding:18px 12px 22px}
+.mb-title{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:600}
+.mb-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--bg-700);
+  border:var(--border);border-radius:var(--radius);overflow:hidden;max-height:48vh;overflow-y:auto;
+}
+.mb-cell{
+  background:var(--bg-800);height:88px;display:flex;align-items:center;justify-content:center;
+  padding:12px 14px;transition:.16s ease;
+}
+.mb-cell img{max-height:34px;max-width:100%;width:auto;object-fit:contain;filter:grayscale(1) invert(1) brightness(1.15);opacity:.7;transition:.18s ease}
+.mb-cell:hover img{opacity:1;filter:grayscale(1) invert(1) brightness(1.5)}
+.mb-cell:hover{background:#23272D}
+.mb-cell span{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.mb-note{margin-top:12px;font-size:11.5px;color:var(--muted)}
+
+/* ---------- mega «Προϊόντα» ---------- */
+.mega-products{
+  position:absolute;left:0;right:0;top:100%;z-index:985;
+  background:var(--bg-900);border-top:1px solid var(--bg-700);border-bottom:1px solid var(--bg-700);
+  box-shadow:0 24px 48px rgba(0,0,0,.55);display:none;
+}
+.mega-products.is-open{display:block}
+.mp-inner{max-width:var(--container);margin:0 auto;padding:0 12px 26px}
+.mp-tabs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--bg-700);margin:0 -12px}
+.mp-tab{
+  padding:17px 10px;background:transparent;border:0;border-bottom:2px solid transparent;
+  color:var(--muted);font-size:13.5px;font-weight:500;letter-spacing:.02em;cursor:pointer;
+  transition:.16s ease;
+}
+.mp-tab:hover{color:#fff;background:rgba(255,255,255,.03)}
+.mp-tab.is-active{color:var(--accent);background:rgba(46,125,154,.12);border-bottom-color:var(--accent);font-weight:600}
+.mp-pane{display:none}
+.mp-pane.is-active{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;padding-top:26px;animation:mpFade .2s ease}
+.mp-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mp-col h4{
+  font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:700;
+  margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--bg-700);
+}
+.mp-col ul{list-style:none;padding:0;margin:0 0 20px}
+.mp-col li{position:relative;padding:4px 0 4px 13px;font-size:13px;line-height:1.45}
+.mp-col li::before{content:"";position:absolute;left:0;top:11px;width:3px;height:3px;border-radius:50%;background:var(--accent)}
+.mp-col a{color:#DDE1E6}
+.mp-col a:hover{color:var(--accent-hover)}
+.mp-media{display:flex;flex-direction:column;gap:8px}
+.mp-media img{max-height:400px;width:auto;max-width:100%;margin-left:auto;border-radius:12px;display:block}
+.mp-media img[src=""],.mp-media img:not([src]){display:none}
+.mp-ph{
+  aspect-ratio:430/640;max-height:400px;margin-left:auto;border:2px dashed #4A505A;border-radius:12px;
+  background:var(--bg-800);display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:10px;letter-spacing:.12em;text-align:center;padding:12px;
+}
+
+/* ---------- mobile menu ---------- */
+.mobile-menu{
+  display:none;background:var(--bg-800);border-top:1px solid var(--bg-700);
+  max-height:calc(100vh - 112px);overflow-y:auto;
+}
+.mobile-menu.is-open{display:block}
+.mm-group{border-bottom:1px solid var(--bg-700)}
+.mm-group:last-child{border-bottom:0}
+.mm-summary{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:15px 4px;font-size:15px;color:var(--text);cursor:pointer;list-style:none;
+}
+.mm-summary::-webkit-details-marker{display:none}
+.mm-summary .bi{font-size:12px;color:var(--muted);transition:transform .18s ease}
+details[open] > .mm-summary .bi.mm-chev{transform:rotate(180deg)}
+.mm-body{padding:0 0 14px}
+.mm-link{display:block;padding:8px 0 8px 10px;font-size:14px;color:#DDE1E6;border-bottom:1px solid rgba(255,255,255,.05)}
+.mm-link:last-child{border-bottom:0}
+.mm-h5{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px;font-weight:700}
+.mm-tabs > details{border-bottom:1px solid rgba(255,255,255,.06)}
+.mm-tabs .mm-summary{font-size:14px;padding:12px 0 12px 10px}
+.mm-tabs .mm-body{padding-left:10px}
+.mm-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg-700);border-radius:6px;overflow:hidden}
+.mm-brands a{background:var(--bg-900);height:62px;display:flex;align-items:center;justify-content:center;padding:8px}
+.mm-brands img{max-height:28px;max-width:100%;filter:grayscale(1) brightness(1.6);opacity:.8}
+
+/* ΦΑΣΗ Γ — hero κατηγορίας (placeholder 1920×520, όπως της αρχικής) */
+.cat-hero{
+  position:relative;min-height:520px;display:flex;align-items:flex-end;
+  padding:0 0 58px;overflow:hidden;border-bottom:var(--border);
+}
+.cat-hero .ph{position:absolute;inset:0;border-radius:0;border:2px dashed #4A505A;align-items:flex-end;justify-content:flex-end;padding:0 16px 12px 0;font-size:10px;opacity:.45}
+.cat-hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(10,12,14,.92) 0%,rgba(10,12,14,.7) 50%,rgba(10,12,14,.4) 100%);
+}
+.cat-hero .container{position:relative;z-index:2}
+.cat-hero__title{font-size:44px;font-weight:700;letter-spacing:-.02em;margin:0;color:#fff}
+.cat-hero .cat-breadcrumb{margin-bottom:14px}
+
+@media (max-width:1199px){
+  .mb-grid{grid-template-columns:repeat(4,1fr)}
+  .mp-pane.is-active{grid-template-columns:minmax(0,1fr) 240px;gap:24px}
+  .cat-hero__title{font-size:36px}
+}
+@media (max-width:991px){
+  .site-header .header-row{min-height:92px}
+  .header-logo img{height:60px}
+  .main-nav,.header-search,.btn-products{display:none}
+  .nav-toggle{display:inline-flex}
+  .mb-grid{grid-template-columns:repeat(3,1fr)}
+  .cat-hero{min-height:420px;padding-bottom:40px}
+  .cat-hero__title{font-size:30px}
+}
+@media (max-width:767px){
+  .site-header .header-row{min-height:76px}
+  .header-logo img{height:50px}
+  .mm-brands{grid-template-columns:repeat(2,1fr)}
+  .cat-hero{min-height:340px;padding-bottom:30px}
+  .cat-hero__title{font-size:24px}
+}
+/* =========================================================================
+   v2 — ΦΑΣΗ Δ: product.html, επάνω μέρος σε φωτεινό θέμα
+   Μόνο νέες κλάσεις (pp2-*), το κάτω μέρος (Q&A, carousels, banners) μένει ως έχει.
+   ========================================================================= */
+.page-product{background:#F5F6F8;color:#1B1D21}
+
+.pp2-breadcrumb{padding:16px 0 2px}
+.pp2-breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;font-size:12.5px;color:#6B7280}
+.pp2-breadcrumb li{display:flex;align-items:center;gap:8px}
+.pp2-breadcrumb li+li::before{content:"/";color:#C2C7CE}
+.pp2-breadcrumb a{color:#6B7280}
+.pp2-breadcrumb a:hover{color:var(--accent)}
+.pp2-breadcrumb li[aria-current]{color:#1B1D21;font-weight:500}
+
+.pp2-main{padding:18px 0 26px}
+.pp2-gallery{position:sticky;top:126px}
+.pp2-main-img{
+  background:#fff;border:1px solid #E3E6EA;border-radius:16px;overflow:hidden;
+  aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;
+}
+.pp2-main-img img{width:100%;height:100%;object-fit:contain;padding:22px}
+.pp2-zoom{
+  position:absolute;right:14px;top:14px;width:38px;height:38px;border-radius:10px;
+  border:1px solid #E3E6EA;background:#fff;color:#4B5563;display:flex;align-items:center;justify-content:center;
+}
+.pp2-zoom:hover{border-color:var(--accent);color:var(--accent)}
+.pp2-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.pp2-thumb{
+  background:#fff;border:1px solid #E3E6EA;border-radius:12px;aspect-ratio:1/1;overflow:hidden;
+  padding:0;cursor:pointer;transition:.15s ease;
+}
+.pp2-thumb img{width:100%;height:100%;object-fit:contain;padding:8px}
+.pp2-thumb:hover{border-color:#B9C0C8}
+.pp2-thumb.is-active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.pp2-360{
+  display:inline-flex;align-items:center;gap:10px;margin-top:14px;
+  font-size:12.5px;color:#374151;
+}
+.pp2-360 .badge360{
+  width:42px;height:42px;border-radius:50%;border:1px solid #CBD2DA;display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;letter-spacing:.02em;color:#111827;background:#fff;flex:none;
+}
+.pp2-360:hover{color:var(--accent)}
+.pp2-360:hover .badge360{border-color:var(--accent);color:var(--accent)}
+
+/* δεξιά */
+.pp2-title{font-size:27px;line-height:1.26;font-weight:700;letter-spacing:-.015em;color:#111827;margin:0 0 10px}
+.pp2-avail{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:#12805C;margin:0 0 16px}
+.pp2-avail .bi{font-size:16px}
+.pp2-brandline{
+  display:flex;align-items:center;flex-wrap:wrap;gap:16px;background:#fff;
+  border:1px solid #E3E6EA;border-radius:14px;padding:12px 16px;margin-bottom:18px;
+}
+.pp2-brand-logo{display:inline-flex;align-items:center;height:44px}
+.pp2-brand-logo img{height:38px;width:auto;object-fit:contain}
+.pp2-brandline .vsep{width:1px;height:30px;background:#E3E6EA}
+.pp2-brandline .lbl{font-size:12px;color:#6B7280;margin-right:6px}
+.pp2-brandline .val{font-size:14px;font-weight:600;color:#111827}
+.pp2-wish{
+  margin-left:auto;width:44px;height:44px;border:1px solid #E3E6EA;border-radius:12px;background:#fff;
+  display:inline-flex;align-items:center;justify-content:center;color:#4B5563;cursor:pointer;transition:.15s ease;
+}
+.pp2-wish:hover{border-color:var(--accent);color:var(--accent)}
+.pp2-wish.is-on{background:#FDECEC;border-color:#E88;color:#D14343}
+
+/* πλαίσιο αγοράς — ένα ενιαίο οριζόντιο card */
+.pp2-buy{
+  display:grid;grid-template-columns:auto 1px auto 1px 1fr;align-items:center;gap:20px;
+  background:#fff;border:1px solid #E3E6EA;border-radius:16px;padding:18px 20px;
+  box-shadow:0 6px 18px rgba(17,24,39,.05);margin-bottom:22px;
+}
+.pp2-price{display:flex;flex-direction:column;gap:4px;white-space:nowrap}
+.pp2-old-row{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.pp2-old{font-size:14px;color:#9AA1AA;text-decoration:line-through}
+.pp2-badge{background:#D9534F;color:#fff;font-size:11px;font-weight:700;border-radius:5px;padding:2px 6px}
+.pp2-new{font-size:34px;font-weight:800;letter-spacing:-.02em;color:#111827;line-height:1.05}
+.pp2-buy .vsep{width:1px;height:52px;background:#EAEDF0}
+.pp2-add{height:54px;padding:0 22px;border:0;border-radius:12px;background:var(--accent);color:#fff;font-size:15px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;transition:.16s ease}
+.pp2-add:hover{background:var(--accent-hover)}
+.pp2-reviews{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.pp2-stars{display:flex;align-items:center;gap:6px;color:#F5A623;font-size:14px}
+.pp2-stars .n{color:#374151;font-size:12.5px;margin-left:2px}
+.btn-reviews{
+  display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;
+  border:1.5px solid var(--accent);border-radius:999px;background:#fff;color:var(--accent);
+  font-size:12.5px;font-weight:600;cursor:pointer;transition:.16s ease;
+}
+.btn-reviews:hover{background:var(--accent);color:#fff}
+.btn-reviews .bi{font-size:13px}
+
+/* αποστολή */
+.pp2-ship{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;margin-bottom:26px}
+.ship-card{background:#EAF2F7;border:1px solid #D3E2EC;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.ship-card .icon{width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--accent);flex:none}
+.ship-card .txt{line-height:1.25;margin-right:auto}
+.ship-card .txt strong{display:block;font-size:13.5px;color:#111827;font-weight:600}
+.ship-card .txt span{font-size:11.5px;color:#5B6470}
+.ship-form2{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ship-form2 select,.ship-form2 input{
+  height:42px;border:1px solid #CFD6DE;border-radius:10px;background:#fff;color:#111827;
+  font-size:13px;padding:0 12px;
+}
+.ship-form2 select{min-width:128px}
+.ship-form2 input{width:110px}
+.ship-form2 button{
+  height:42px;width:46px;border:0;border-radius:10px;background:var(--accent);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.16s ease;
+}
+.ship-form2 button:hover{background:var(--accent-hover)}
+.courier-card{
+  background:#fff;border:1px solid #E3E6EA;border-radius:14px;padding:14px 16px;
+  display:flex;align-items:center;gap:12px;transition:.2s ease;
+}
+.courier-card.is-idle{opacity:1}
+.courier-card .acs{
+  font-family:Inter,sans-serif;font-weight:800;font-size:15px;color:#E2001A;letter-spacing:-.02em;
+  border-bottom:2px solid #E2001A;padding-bottom:1px;flex:none;
+}
+.courier-card .meta{line-height:1.25}
+.courier-card .meta strong{display:block;font-size:13px;color:#111827;font-weight:600}
+.courier-card .meta span{font-size:11px;color:#6B7280}
+.courier-card .free{margin-left:auto;background:#E7F6EE;color:#12805C;font-size:11.5px;font-weight:700;border-radius:6px;padding:3px 8px}
+
+/* χαρακτηριστικά */
+.pp2-acc{border:1px solid #E3E6EA;border-radius:14px;background:#fff;overflow:hidden;margin-bottom:16px}
+.pp2-acc .accordion-item{border:0;background:none}
+.pp2-acc .accordion-button{
+  background:#fff;color:#111827;font-size:15px;font-weight:600;padding:16px 18px;box-shadow:none;border:0;
+}
+.pp2-acc .accordion-button:not(.collapsed){background:#fff;color:#111827;box-shadow:none}
+.pp2-acc .accordion-button:focus{box-shadow:none}
+.pp2-acc .accordion-button::after{filter:invert(.55)}
+.pp2-acc .accordion-body{padding:0 18px 16px}
+.pp2-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px}
+.pp2-table th,.pp2-table td{padding:11px 14px;text-align:left;vertical-align:top;border:0}
+.pp2-table th{color:#4B5563;font-weight:500;width:38%}
+.pp2-table td{color:#111827}
+.pp2-table tbody tr:nth-child(odd){background:#F7F8FA}
+.pp2-table tbody tr:first-child th,.pp2-table tbody tr:first-child td{border-radius:8px 0 0 8px}
+.pp2-table tbody tr:first-child td:last-child{border-radius:0 8px 8px 0}
+
+/* γνήσιοι κωδικοί */
+.pp2-oe{background:#fff;border:1px solid #E3E6EA;border-radius:14px;padding:16px 18px;margin-bottom:16px}
+.pp2-oe h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;font-weight:700;margin:0 0 12px}
+.pp2-chips{display:flex;flex-wrap:wrap;gap:8px}
+.pp2-chip{
+  background:#F2F4F7;border:1px solid #E3E6EA;border-radius:999px;padding:6px 12px;
+  font-size:12.5px;color:#111827;font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+
+/* άλλοι κατασκευαστές */
+.pp2-others{background:#fff;border:1px solid #E3E6EA;border-radius:14px;padding:16px 18px 18px;margin-bottom:8px}
+.pp2-others h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#4B5563;font-weight:700;margin:0 0 12px}
+.pp2-others-row{display:flex;flex-wrap:wrap;gap:12px}
+.pp2-brand{
+  display:flex;align-items:center;justify-content:center;width:104px;height:52px;
+  border:1px solid #E3E6EA;border-radius:10px;background:#fff;transition:.15s ease;
+}
+.pp2-brand img{max-height:26px;max-width:80px;object-fit:contain;filter:grayscale(1);opacity:.8;transition:.15s ease}
+.pp2-brand:hover{border-color:var(--accent);box-shadow:0 3px 10px rgba(17,24,39,.06)}
+.pp2-brand:hover img{filter:none;opacity:1}
+
+@media (max-width:1199px){
+  .pp2-title{font-size:23px}
+  .pp2-new{font-size:30px}
+  .pp2-buy{grid-template-columns:auto auto 1fr;row-gap:14px}
+  .pp2-buy .vsep{display:none}
+  .pp2-reviews{grid-column:1/-1;align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:12px}
+}
+@media (max-width:991px){
+  .pp2-gallery{position:static;margin-bottom:22px}
+  .pp2-ship{grid-template-columns:1fr}
+}
+@media (max-width:767px){
+  .pp2-title{font-size:20px}
+  .pp2-new{font-size:26px}
+  .pp2-buy{grid-template-columns:1fr;gap:14px;padding:16px}
+  .pp2-add{width:100%}
+  .pp2-brandline{flex-wrap:wrap;gap:10px}
+  .pp2-brandline .vsep{display:none}
+  .pp2-wish{margin-left:0}
+  .pp2-table th{width:45%}
+  .pp2-brand{width:calc(50% - 6px)}
+}
+
+/* ==================================================================
+   v3 — διορθώσεις πελάτη (13:5x)
+   [1] αστέρια παλιά θαμπά · [2] mega tabs + μεγαλύτερη φωτό ·
+   [3α] γραμμή κατασκευαστή δεξιά · [3β] stepper ποσότητας ·
+   [3γ] φωτεινό κάτω μέρος product · [4] μικρότερα πάνελ + 2 μεγάλα banners
+   ================================================================== */
+
+/* [2] mega «Προϊόντα» — tabs πιο έντονα, bold, πατήσιμα */
+.mp-tab{
+  color:#CBD5E0;font-weight:700;font-size:14px;letter-spacing:.01em;
+  background:rgba(255,255,255,.035);
+}
+.mp-tab:hover{color:#fff;background:rgba(58,149,181,.20)}
+.mp-tab.is-active{
+  color:#fff;font-weight:800;background:var(--accent);
+  border-bottom-color:var(--accent-hover);box-shadow:inset 0 -3px 0 var(--accent-hover);
+}
+/* [2] φωτογραφία δεξιά — μεγαλύτερη και πιο πλούσια (χωρίς cap 400px) */
+.mp-pane.is-active{grid-template-columns:minmax(0,1fr) 380px;gap:36px;padding-top:24px}
+.mp-media img{
+  width:100%;max-height:480px;aspect-ratio:4/5;object-fit:cover;
+  border-radius:14px;display:block;
+}
+.mp-ph{
+  width:100%;max-height:480px;margin-left:0;border-radius:14px;
+  aspect-ratio:4/5;font-size:11.5px;letter-spacing:.1em;
+}
+/* πιο ευανάγνωστες λίστες ώστε το αριστερό να γεμίζει το ύψος της φωτογραφίας */
+.mp-col h4{font-size:12px;margin-bottom:10px}
+.mp-col li{font-size:13.8px;padding:6px 0 6px 14px}
+.mp-col li::before{top:14px}
+
+/* [3α] γραμμή κατασκευαστή — όλη η σειρά δεξιά, TEXTAR + MADE IN CHINA */
+.pp2-brandline{justify-content:flex-end}
+.pp2-brandline .pp2-brand-logo{height:40px}
+.pp2-brandline .pp2-brand-logo img{height:34px;width:auto;object-fit:contain}
+
+/* [3β] stepper: [−] αριθμός [+] στη θέση του «Προσθήκη στο καλάθι» */
+.pp2-stepper{
+  display:inline-flex;align-items:center;justify-content:space-between;
+  height:54px;min-width:190px;border-radius:8px;background:var(--accent);color:#fff;
+  box-shadow:0 4px 12px rgba(46,125,154,.28);
+}
+.pp2-stepper button{
+  width:56px;height:54px;background:transparent;border:0;color:#fff;font-size:20px;
+  font-weight:700;line-height:1;cursor:pointer;transition:.15s ease;
+}
+.pp2-stepper button:hover{background:rgba(255,255,255,.16)}
+.pp2-stepper .qty{min-width:60px;text-align:center;font-size:17px;font-weight:700}
+
+/* [1] αστέρια: παλιά, θαμπή/σκιασμένη εμφάνιση (όχι το έντονο χρυσό του v2) */
+.page-product .pp2-stars{color:#BFB8AB}
+.page-product .pp2-stars .n{color:#6B7280}
+
+/* [3γ] product: σκούρα γράμματα στο κάτω μέρος (ήταν λευκά του v1) */
+.page-product .qa{border-top-color:#E3E6EA}
+.page-product .qa h2{color:#111827}
+.page-product .qa-item{border-bottom-color:#E9ECEF}
+.page-product .qa-avatar{background:#EDF1F5;color:#1F2937}
+.page-product .qa-meta{color:#5B6472}
+.page-product .qa-meta strong{color:#111827}
+.page-product .qa-q{color:#1B1D21}
+.page-product .qa-answer{background:#F2F5F8;color:#374151;border-left-color:var(--accent)}
+.page-product .qa-answer .who{color:#111827}
+.page-product .qa-note{color:#6B7280}
+.page-product .btn-outline-dark-2{border-color:#1B1D21;color:#1B1D21;background:transparent}
+.page-product .btn-outline-dark-2:hover{background:#1B1D21;color:#fff}
+.page-product .pp-carousel-head h2{color:#111827}
+.page-product .car-arrows button{border-color:#D5DAE0;color:#111827;background:#fff}
+.page-product .car-arrows button:hover{background:#111827;color:#fff;border-color:#111827}
+.page-product .car-track::-webkit-scrollbar-thumb{background:#C9CFD6}
+
+/* [4] μικρότερα info panels + δύο μεγάλα banners */
+.info-banners{padding:34px 0 26px;gap:20px}
+.info-banner{height:128px}
+.ib-body{padding:14px 18px;gap:2px}
+.ib-body .ib-icon{width:28px;height:28px;margin-bottom:4px}
+.ib-body .ib-icon .bi{font-size:14px}
+.ib-body h3{font-size:14.5px}
+.ib-body p{font-size:11.5px}
+.info-big{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:0 0 44px}
+.info-big .big{
+  position:relative;aspect-ratio:642/320;overflow:hidden;
+  border:2px dashed #4A505A;border-radius:var(--radius);background:var(--bg-800);
+  display:flex;align-items:flex-end;justify-content:flex-end;padding:0 12px 10px 0;
+  color:var(--muted);font-size:10px;letter-spacing:.12em;text-align:right;
+}
+@media (max-width:991px){
+  .mp-pane.is-active{grid-template-columns:minmax(0,1fr) 260px;gap:22px}
+}
+@media (max-width:767px){
+  .info-big{grid-template-columns:1fr}
+  .info-banner{height:112px}
+  .pp2-brandline{justify-content:flex-start}
+  .pp2-stepper{width:100%}
+}
+
+/* v3 — το αριστερό μέρος του mega απλώνεται σε όλο το ύψος της φωτογραφίας */
+.mp-left{display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:100%}
+.mp-foot{
+  margin:0;padding-top:14px;border-top:1px solid var(--bg-700);
+  font-size:12.5px;color:var(--muted);
+}
+.mp-foot a{color:var(--accent);font-weight:600}
+.mp-foot a:hover{color:var(--accent-hover)}
+.mp-foot .bi{font-size:11px}
+
+/* v4 — το παλιό (v1) mega του αριστερού «Προϊόντα» ανοίγει και με click (JS .is-open) */
+.mega-menu.is-open{display:block;animation:mpFade .18s ease}
+.mega-menu{max-height:calc(100vh - 140px);overflow:auto}
+.nav-link.is-open .bi{transform:rotate(180deg);transition:.18s ease}
+/* στο mobile κρύβεται το παλιό panel — μένει το mobile menu */
+@media (max-width:991px){ .mega-menu{display:none !important} }

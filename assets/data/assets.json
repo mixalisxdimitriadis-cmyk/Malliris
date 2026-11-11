@@ -1,0 +1,1041 @@
+{
+  "meta": {
+    "project": "MALLIRIS.GR — redesign sample (3 pages)",
+    "generated": "2026-11-10 20:06",
+    "sources": [
+      "https://www.malliris.gr/el/",
+      "https://www.malliris.gr/el/63-ergalia",
+      "https://www.malliris.gr/el/kapakia/19784-kapakia-china-fi-z13dtj-gia-fiat-16v-z13dtj-oe-71739601.html"
+    ],
+    "note": "Όλα τα αρχεία είναι τοπικά (κανένα hotlink). Διαστάσεις/μέγεθος από pre-screen (step 9)."
+  },
+  "logo": {
+    "file": "logo/malliris-logo.jpg",
+    "alt": "Malliris.gr",
+    "source": "https://www.malliris.gr/img/logo-1636041726.jpg",
+    "w": 161,
+    "h": 71,
+    "bytes": 6505,
+    "extra": {
+      "file": "logo/malliris-footer-logo.png",
+      "w": 172,
+      "h": 79,
+      "source": "https://www.malliris.gr/themes/malliris/assets/img/footer-logo.png"
+    },
+    "note": "Δεν υπάρχει SVG· μόνο το site logo 161×71 (jpg) και το footer logo 172×79 (png). Low-res — βλ. αναφορά."
+  },
+  "categories": [
+    {
+      "name": "ΑΝΤΛΙΕΣ ΛΑΔΙΟΥ",
+      "url": "https://www.malliris.gr/el/42-antlies-ladiou",
+      "slug": "42-antlies-ladiou"
+    },
+    {
+      "name": "ΒΑΛΒΙΔΕΣ",
+      "url": "https://www.malliris.gr/el/32-valvides",
+      "slug": "32-valvides"
+    },
+    {
+      "name": "ΒΙΔΕΣ",
+      "url": "https://www.malliris.gr/el/55-vides",
+      "slug": "55-vides"
+    },
+    {
+      "name": "ΕΔΡΕΣ",
+      "url": "https://www.malliris.gr/el/41-edres",
+      "slug": "41-edres"
+    },
+    {
+      "name": "ΕΚΚΕΝΤΡΟΦΟΡΟΙ",
+      "url": "https://www.malliris.gr/el/44-εκκεντροφοροι",
+      "slug": "44-εκκεντροφοροι"
+    },
+    {
+      "name": "ΕΛΑΤΗΡΙΑ",
+      "url": "https://www.malliris.gr/el/38-elatiria",
+      "slug": "38-elatiria"
+    },
+    {
+      "name": "ΕΜΒΟΛΑ",
+      "url": "https://www.malliris.gr/el/35-emvola",
+      "slug": "35-emvola"
+    },
+    {
+      "name": "ΕΡΓΑΛΕΙΑ",
+      "url": "https://www.malliris.gr/el/63-ergalia",
+      "slug": "63-ergalia"
+    },
+    {
+      "name": "ΚΑΠΑΚΙΑ",
+      "url": "https://www.malliris.gr/el/53-kapakia",
+      "slug": "53-kapakia"
+    },
+    {
+      "name": "ΚΑΡΤΕΡ",
+      "url": "https://www.malliris.gr/el/48-karter",
+      "slug": "48-karter"
+    },
+    {
+      "name": "ΚΟΚΚΟΡΑΚΙΑ",
+      "url": "https://www.malliris.gr/el/45-kokkorakia",
+      "slug": "45-kokkorakia"
+    },
+    {
+      "name": "ΚΟΛΛΕΣ",
+      "url": "https://www.malliris.gr/el/54-kolles",
+      "slug": "54-kolles"
+    },
+    {
+      "name": "ΚΟΥΖΙΝΕΤΑ",
+      "url": "https://www.malliris.gr/el/40-kouzineta",
+      "slug": "40-kouzineta"
+    },
+    {
+      "name": "ΛΙΠΑΝΤΙΚΑ",
+      "url": "https://www.malliris.gr/el/47-lipantika",
+      "slug": "47-lipantika"
+    },
+    {
+      "name": "ΜΑΣΟΥΡΙΑ",
+      "url": "https://www.malliris.gr/el/36-masouria",
+      "slug": "36-masouria"
+    },
+    {
+      "name": "ΜΠΙΕΛΕΣ",
+      "url": "https://www.malliris.gr/el/50-μπιελες",
+      "slug": "50-μπιελες"
+    },
+    {
+      "name": "ΜΠΛΟΚ",
+      "url": "https://www.malliris.gr/el/67-blok",
+      "slug": "67-blok"
+    },
+    {
+      "name": "ΟΔΗΓΟΙ",
+      "url": "https://www.malliris.gr/el/33-odigi",
+      "slug": "33-odigi"
+    },
+    {
+      "name": "ΠΥΡΟΦΟΥΣΚΕΣ",
+      "url": "https://www.malliris.gr/el/60-pirofouskes",
+      "slug": "60-pirofouskes"
+    },
+    {
+      "name": "ΣΕΤ ΧΡΟΝΙΣΜΟΥ",
+      "url": "https://www.malliris.gr/el/43-set-xronismou",
+      "slug": "43-set-xronismou"
+    },
+    {
+      "name": "ΣΜΥΡΙΔΑΛΟΙΦΕΣ",
+      "url": "https://www.malliris.gr/el/62-σμυριδαλοιφες",
+      "slug": "62-σμυριδαλοιφες"
+    },
+    {
+      "name": "ΣΠΡΕΙ",
+      "url": "https://www.malliris.gr/el/39-spri",
+      "slug": "39-spri"
+    },
+    {
+      "name": "ΣΤΡΟΦΑΛΟΙ",
+      "url": "https://www.malliris.gr/el/49-strofali",
+      "slug": "49-strofali"
+    },
+    {
+      "name": "ΤΑΠΕΣ",
+      "url": "https://www.malliris.gr/el/52-tapes",
+      "slug": "52-tapes"
+    },
+    {
+      "name": "ΤΣΙΜΟΥΧΕΣ",
+      "url": "https://www.malliris.gr/el/66-tsimouxes",
+      "slug": "66-tsimouxes"
+    },
+    {
+      "name": "ΤΣΙΜΟΥΧΑΚΙΑ",
+      "url": "https://www.malliris.gr/el/51-tsimouxakia",
+      "slug": "51-tsimouxakia"
+    },
+    {
+      "name": "ΦΛΑΝΤΖΕΣ",
+      "url": "https://www.malliris.gr/el/56-flantzes",
+      "slug": "56-flantzes"
+    },
+    {
+      "name": "ΧΙΤΩΝΙΑ",
+      "url": "https://www.malliris.gr/el/37-xitonia",
+      "slug": "37-xitonia"
+    },
+    {
+      "name": "ΩΣΤΗΡΙΑ",
+      "url": "https://www.malliris.gr/el/46-ostiria",
+      "slug": "46-ostiria"
+    }
+  ],
+  "brands": [
+    {
+      "name": "AMC",
+      "file": "brands/amc.jpg",
+      "page": "https://www.malliris.gr/el/brand/17-amc",
+      "slug": "amc",
+      "w": 1280,
+      "h": 666,
+      "bytes": 29616
+    },
+    {
+      "name": "KOLBENSCHMIDT",
+      "file": "brands/kolbenschmidt.jpg",
+      "page": "https://www.malliris.gr/el/brand/5-kolbenschmidt",
+      "slug": "kolbenschmidt",
+      "w": 807,
+      "h": 1280,
+      "bytes": 45437
+    },
+    {
+      "name": "TP",
+      "file": "brands/tp.jpg",
+      "page": "https://www.malliris.gr/el/brand/6-tp",
+      "slug": "tp",
+      "w": 1280,
+      "h": 1280,
+      "bytes": 179107
+    },
+    {
+      "name": "FRECCIA",
+      "file": "brands/freccia.jpg",
+      "page": "https://www.malliris.gr/el/brand/1-freccia",
+      "slug": "freccia",
+      "w": 1280,
+      "h": 426,
+      "bytes": 49620
+    },
+    {
+      "name": "TAIHO",
+      "file": "brands/taiho.jpg",
+      "page": "https://www.malliris.gr/el/brand/14-taiho",
+      "slug": "taiho",
+      "w": 1298,
+      "h": 1298,
+      "bytes": 230280
+    },
+    {
+      "name": "BGA",
+      "file": "brands/bga.jpg",
+      "page": "https://www.malliris.gr/el/brand/11-bga",
+      "slug": "bga",
+      "w": 1302,
+      "h": 1280,
+      "bytes": 68810
+    },
+    {
+      "name": "HASTINGS",
+      "file": "brands/hastings.jpg",
+      "page": "https://www.malliris.gr/el/brand/42-hastings",
+      "slug": "hastings",
+      "w": 1280,
+      "h": 956,
+      "bytes": 142361
+    },
+    {
+      "name": "STONE",
+      "file": "brands/stone.jpg",
+      "page": "https://www.malliris.gr/el/brand/52-stone",
+      "slug": "stone",
+      "w": 1280,
+      "h": 444,
+      "bytes": 299001
+    },
+    {
+      "name": "IVAM",
+      "file": "brands/ivam.jpg",
+      "page": "https://www.malliris.gr/el/brand/2-ivam",
+      "slug": "ivam",
+      "w": 1290,
+      "h": 728,
+      "bytes": 81624
+    },
+    {
+      "name": "ELRING",
+      "file": "brands/elring.jpg",
+      "page": "https://www.malliris.gr/el/brand/62-elring",
+      "slug": "elring",
+      "w": 1223,
+      "h": 1274,
+      "bytes": 138833
+    },
+    {
+      "name": "SACHS",
+      "file": "brands/sachs.jpg",
+      "page": "https://www.malliris.gr/el/brand/3-sachs",
+      "slug": "sachs",
+      "w": 1282,
+      "h": 658,
+      "bytes": 56783
+    },
+    {
+      "name": "JCC",
+      "file": "brands/jcc.jpg",
+      "page": "https://www.malliris.gr/el/brand/4-jcc",
+      "slug": "jcc",
+      "w": 1159,
+      "h": 627,
+      "bytes": 60153
+    },
+    {
+      "name": "MORRIS",
+      "file": "brands/morris.jpg",
+      "page": "https://www.malliris.gr/el/brand/7-morris",
+      "slug": "morris",
+      "w": 500,
+      "h": 350,
+      "bytes": 64832
+    },
+    {
+      "name": "TRW",
+      "file": "brands/trw.jpg",
+      "page": "https://www.malliris.gr/el/brand/8-trw",
+      "slug": "trw",
+      "w": 1280,
+      "h": 388,
+      "bytes": 23385
+    },
+    {
+      "name": "OSK",
+      "file": "brands/osk.jpg",
+      "page": "https://www.malliris.gr/el/brand/9-osk",
+      "slug": "osk",
+      "w": 1280,
+      "h": 513,
+      "bytes": 47365
+    },
+    {
+      "name": "AISIN",
+      "file": "brands/aisin.jpg",
+      "page": "https://www.malliris.gr/el/brand/10-aisin",
+      "slug": "aisin",
+      "w": 1280,
+      "h": 216,
+      "bytes": 25551
+    },
+    {
+      "name": "FEBI",
+      "file": "brands/febi.jpg",
+      "page": "https://www.malliris.gr/el/brand/12-febi",
+      "slug": "febi",
+      "w": 1280,
+      "h": 1224,
+      "bytes": 152349
+    },
+    {
+      "name": "GENMOT",
+      "file": "brands/genmot.jpg",
+      "page": "https://www.malliris.gr/el/brand/13-genmot",
+      "slug": "genmot",
+      "w": 2019,
+      "h": 1086,
+      "bytes": 121252
+    },
+    {
+      "name": "KIBI",
+      "file": "brands/kibi.jpg",
+      "page": "https://www.malliris.gr/el/brand/15-kibi",
+      "slug": "kibi",
+      "w": 480,
+      "h": 360,
+      "bytes": 16416
+    },
+    {
+      "name": "METALCAUCHO",
+      "file": "brands/metalcaucho.jpg",
+      "page": "https://www.malliris.gr/el/brand/16-metalcaucho",
+      "slug": "metalcaucho",
+      "w": 2957,
+      "h": 627,
+      "bytes": 96160
+    },
+    {
+      "name": "ATHENA",
+      "file": "brands/athena.jpg",
+      "page": "https://www.malliris.gr/el/brand/18-athena",
+      "slug": "athena",
+      "w": 1280,
+      "h": 216,
+      "bytes": 125322
+    },
+    {
+      "name": "REINZ",
+      "file": "brands/reinz.jpg",
+      "page": "https://www.malliris.gr/el/brand/19-reinz",
+      "slug": "reinz",
+      "w": 1280,
+      "h": 273,
+      "bytes": 56221
+    },
+    {
+      "name": "TEXTAR",
+      "file": "brands/textar.jpg",
+      "page": "https://www.malliris.gr/el/brand/20-textar",
+      "slug": "textar",
+      "w": 1282,
+      "h": 369,
+      "bytes": 30434
+    },
+    {
+      "name": "DENSO",
+      "file": "brands/denso.jpg",
+      "page": "https://www.malliris.gr/el/brand/21-denso",
+      "slug": "denso",
+      "w": 2095,
+      "h": 688,
+      "bytes": 57624
+    },
+    {
+      "name": "SONNE",
+      "file": "brands/sonne.jpg",
+      "page": "https://www.malliris.gr/el/brand/22-sonne",
+      "slug": "sonne",
+      "w": 361,
+      "h": 81,
+      "bytes": 26364
+    },
+    {
+      "name": "CHINA",
+      "file": "brands/china.jpg",
+      "page": "https://www.malliris.gr/el/brand/23-china",
+      "slug": "china",
+      "w": 666,
+      "h": 280,
+      "bytes": 66609
+    },
+    {
+      "name": "FUJI",
+      "file": "brands/fuji.jpg",
+      "page": "https://www.malliris.gr/el/brand/24-fuji",
+      "slug": "fuji",
+      "w": 1280,
+      "h": 854,
+      "bytes": 28292
+    },
+    {
+      "name": "DOKURO",
+      "file": "brands/dokuro.jpg",
+      "page": "https://www.malliris.gr/el/brand/25-dokuro",
+      "slug": "dokuro",
+      "w": 1021,
+      "h": 1280,
+      "bytes": 200522
+    },
+    {
+      "name": "NPR",
+      "file": "brands/npr.jpg",
+      "page": "https://www.malliris.gr/el/brand/26-npr",
+      "slug": "npr",
+      "w": 1250,
+      "h": 934,
+      "bytes": 26931
+    },
+    {
+      "name": "NPR RACE",
+      "file": "brands/npr-race.jpg",
+      "page": "https://www.malliris.gr/el/brand/27-npr-race",
+      "slug": "npr-race",
+      "w": 446,
+      "h": 334,
+      "bytes": 12591
+    },
+    {
+      "name": "SMY",
+      "file": "brands/smy.jpg",
+      "page": "https://www.malliris.gr/el/brand/28-smy",
+      "slug": "smy",
+      "w": 1920,
+      "h": 583,
+      "bytes": 81522
+    },
+    {
+      "name": "HEPOLITE",
+      "file": "brands/hepolite.jpg",
+      "page": "https://www.malliris.gr/el/brand/29-hepolite",
+      "slug": "hepolite",
+      "w": 800,
+      "h": 600,
+      "bytes": 61877
+    },
+    {
+      "name": "ART",
+      "file": "brands/art.jpg",
+      "page": "https://www.malliris.gr/el/brand/31-art",
+      "slug": "art",
+      "w": 415,
+      "h": 144,
+      "bytes": 48638
+    },
+    {
+      "name": "TOTO",
+      "file": "brands/toto.jpg",
+      "page": "https://www.malliris.gr/el/brand/33-toto",
+      "slug": "toto",
+      "w": 368,
+      "h": 225,
+      "bytes": 11466
+    },
+    {
+      "name": "NDC",
+      "file": "brands/ndc.jpg",
+      "page": "https://www.malliris.gr/el/brand/34-ndc",
+      "slug": "ndc",
+      "w": 1280,
+      "h": 961,
+      "bytes": 53483
+    },
+    {
+      "name": "MAZDA",
+      "file": "brands/mazda.jpg",
+      "page": "https://www.malliris.gr/el/brand/35-mazda",
+      "slug": "mazda",
+      "w": 400,
+      "h": 225,
+      "bytes": 54149
+    },
+    {
+      "name": "TOYOTA",
+      "file": "brands/toyota.jpg",
+      "page": "https://www.malliris.gr/el/brand/37-toyota",
+      "slug": "toyota",
+      "w": 1200,
+      "h": 630,
+      "bytes": 137741
+    },
+    {
+      "name": "PARAUT",
+      "file": "brands/paraut.jpg",
+      "page": "https://www.malliris.gr/el/brand/39-paraut",
+      "slug": "paraut",
+      "w": 1281,
+      "h": 258,
+      "bytes": 33589
+    },
+    {
+      "name": "MITSUBISHI",
+      "file": "brands/mitsubishi.jpg",
+      "page": "https://www.malliris.gr/el/brand/40-mitsubishi",
+      "slug": "mitsubishi",
+      "w": 1024,
+      "h": 576,
+      "bytes": 40510
+    },
+    {
+      "name": "FEBI-INA",
+      "file": "brands/febi-ina.jpg",
+      "page": "https://www.malliris.gr/el/brand/41-febi-ina",
+      "slug": "febi-ina",
+      "w": 1200,
+      "h": 1200,
+      "bytes": 29264
+    },
+    {
+      "name": "KING",
+      "file": "brands/king.jpg",
+      "page": "https://www.malliris.gr/el/brand/43-king",
+      "slug": "king",
+      "w": 1280,
+      "h": 385,
+      "bytes": 70278
+    },
+    {
+      "name": "KIWI",
+      "file": "brands/kiwi.jpg",
+      "page": "https://www.malliris.gr/el/brand/44-kiwi",
+      "slug": "kiwi",
+      "w": 1116,
+      "h": 1296,
+      "bytes": 103066
+    },
+    {
+      "name": "DAIDO",
+      "file": "brands/daido.jpg",
+      "page": "https://www.malliris.gr/el/brand/45-daido",
+      "slug": "daido",
+      "w": 800,
+      "h": 436,
+      "bytes": 31373
+    },
+    {
+      "name": "ACL RACE",
+      "file": "brands/acl-race.jpg",
+      "page": "https://www.malliris.gr/el/brand/46-acl-race",
+      "slug": "acl-race",
+      "w": 1280,
+      "h": 346,
+      "bytes": 505310
+    },
+    {
+      "name": "ACL",
+      "file": "brands/acl.jpg",
+      "page": "https://www.malliris.gr/el/brand/47-acl",
+      "slug": "acl",
+      "w": 1238,
+      "h": 1280,
+      "bytes": 96839
+    },
+    {
+      "name": "GLASER",
+      "file": "brands/glaser.jpg",
+      "page": "https://www.malliris.gr/el/brand/49-glaser",
+      "slug": "glaser",
+      "w": 900,
+      "h": 500,
+      "bytes": 12079
+    },
+    {
+      "name": "AJUSA",
+      "file": "brands/ajusa.jpg",
+      "page": "https://www.malliris.gr/el/brand/50-ajusa",
+      "slug": "ajusa",
+      "w": 1283,
+      "h": 514,
+      "bytes": 197784
+    },
+    {
+      "name": "ERISTIC",
+      "file": "brands/eristic.jpg",
+      "page": "https://www.malliris.gr/el/brand/51-eristic",
+      "slug": "eristic",
+      "w": 1280,
+      "h": 226,
+      "bytes": 25281
+    },
+    {
+      "name": "FAI",
+      "file": "brands/fai.jpg",
+      "page": "https://www.malliris.gr/el/brand/53-fai",
+      "slug": "fai",
+      "w": 400,
+      "h": 403,
+      "bytes": 24248
+    },
+    {
+      "name": "KING RACE",
+      "file": "brands/king-race.jpg",
+      "page": "https://www.malliris.gr/el/brand/54-king-race",
+      "slug": "king-race",
+      "w": 1280,
+      "h": 219,
+      "bytes": 67347
+    },
+    {
+      "name": "INA",
+      "file": "brands/ina.jpg",
+      "page": "https://www.malliris.gr/el/brand/59-ina",
+      "slug": "ina",
+      "w": 1280,
+      "h": 1280,
+      "bytes": 104516
+    },
+    {
+      "name": "CASTROL",
+      "file": "brands/castrol.jpg",
+      "page": "https://www.malliris.gr/el/brand/60-castrol",
+      "slug": "castrol",
+      "w": 900,
+      "h": 500,
+      "bytes": 40588
+    },
+    {
+      "name": "SKF",
+      "file": "brands/skf.jpg",
+      "page": "https://www.malliris.gr/el/brand/61-skf",
+      "slug": "skf",
+      "w": 2000,
+      "h": 965,
+      "bytes": 26840
+    },
+    {
+      "name": "PAYEN",
+      "file": "brands/payen.jpg",
+      "page": "https://www.malliris.gr/el/brand/63-payen",
+      "slug": "payen",
+      "w": 1280,
+      "h": 304,
+      "bytes": 20465
+    },
+    {
+      "name": "PIERBURG",
+      "file": "brands/pierburg.jpg",
+      "page": "https://www.malliris.gr/el/brand/64-pierburg",
+      "slug": "pierburg",
+      "w": 900,
+      "h": 500,
+      "bytes": 21969
+    },
+    {
+      "name": "BLUEPRINT",
+      "file": "brands/blueprint.jpg",
+      "page": "https://www.malliris.gr/el/brand/66-blueprint",
+      "slug": "blueprint",
+      "w": 800,
+      "h": 600,
+      "bytes": 100566
+    },
+    {
+      "name": "ILLINOIS",
+      "file": "brands/illinois.jpg",
+      "page": "https://www.malliris.gr/el/brand/67-illinois",
+      "slug": "illinois",
+      "w": 999,
+      "h": 333,
+      "bytes": 29442
+    },
+    {
+      "name": "OPEL",
+      "file": "brands/opel.jpg",
+      "page": "https://www.malliris.gr/el/brand/68-opel",
+      "slug": "opel",
+      "w": 3840,
+      "h": 2160,
+      "bytes": 344233
+    },
+    {
+      "name": "GLYCO",
+      "file": "brands/glyco.jpg",
+      "page": "https://www.malliris.gr/el/brand/71-glyco",
+      "slug": "glyco",
+      "w": 900,
+      "h": 500,
+      "bytes": 15737
+    },
+    {
+      "name": "MERCEDES",
+      "file": "brands/mercedes.jpg",
+      "page": "https://www.malliris.gr/el/brand/72-mercedes",
+      "slug": "mercedes",
+      "w": 400,
+      "h": 400,
+      "bytes": 130546
+    },
+    {
+      "name": "BILSTEIN",
+      "file": "brands/bilstein.jpg",
+      "page": "https://www.malliris.gr/el/brand/73-bilstein",
+      "slug": "bilstein",
+      "w": 900,
+      "h": 500,
+      "bytes": 41681
+    },
+    {
+      "name": "NGK",
+      "file": "brands/ngk.jpg",
+      "page": "https://www.malliris.gr/el/brand/74-ngk",
+      "slug": "ngk",
+      "w": 300,
+      "h": 299,
+      "bytes": 39070
+    },
+    {
+      "name": "KACO",
+      "file": "brands/kaco.jpg",
+      "page": "https://www.malliris.gr/el/brand/75-kaco",
+      "slug": "kaco",
+      "w": 851,
+      "h": 254,
+      "bytes": 70162
+    },
+    {
+      "name": "TTO",
+      "file": "brands/tto.jpg",
+      "page": "https://www.malliris.gr/el/brand/76-tto",
+      "slug": "tto",
+      "w": 350,
+      "h": 175,
+      "bytes": 32351
+    },
+    {
+      "name": "PERMATEX",
+      "file": "brands/permatex.jpg",
+      "page": "https://www.malliris.gr/el/brand/77-permatex",
+      "slug": "permatex",
+      "w": 337,
+      "h": 168,
+      "bytes": 16872
+    },
+    {
+      "name": "MULLER",
+      "file": "brands/muller.jpg",
+      "page": "https://www.malliris.gr/el/brand/78-muller",
+      "slug": "muller",
+      "w": 200,
+      "h": 200,
+      "bytes": 5518
+    },
+    {
+      "name": "MANDO",
+      "file": "brands/mando.jpg",
+      "page": "https://www.malliris.gr/el/brand/79-mando",
+      "slug": "mando",
+      "w": 1280,
+      "h": 365,
+      "bytes": 43384
+    },
+    {
+      "name": "TEIKIN",
+      "file": "brands/teikin.jpg",
+      "page": "https://www.malliris.gr/el/brand/82-teikin",
+      "slug": "teikin",
+      "w": 348,
+      "h": 160,
+      "bytes": 9065
+    }
+  ],
+  "products_ergalia": [
+    {
+      "title": "ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000316001 ΓΙΑ PISTON RING PLIERS 50mm - 110mm OE: -",
+      "url": "https://www.malliris.gr/el/ergalia/17740-ergalia-kolbenschmidt-120000316001-gia-piston-ring-pliers-50mm-110mm-oe--4028977896675.html",
+      "brand": "KOLBENSCHMIDT",
+      "stock": "Τελευταία προϊόντα σε απόθεμα",
+      "stock_class": "badge-warning",
+      "price": "38,15 €",
+      "price_num": 38.15,
+      "unit": "TEM.",
+      "image": "products/ergalia-01.jpg",
+      "w": 1100,
+      "h": 1100,
+      "source_image": "https://www.malliris.gr/44482-thickbox_default/ergalia-kolbenschmidt-120000316001-gia-piston-ring-pliers-50mm-110mm-oe-.jpg"
+    },
+    {
+      "title": "ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000217001 ΓΙΑ FEELER GAUGE 0.05-1.00 OE: -",
+      "url": "https://www.malliris.gr/el/ergalia/16531-ergalia-kolbenschmidt-120000217001-gia-feeler-gauge-005-100-oe--4028977896712.html",
+      "brand": "KOLBENSCHMIDT",
+      "stock": "Άμεσα Διαθέσιμο",
+      "stock_class": "badge-success",
+      "price": "15,26 €",
+      "price_num": 15.26,
+      "unit": "TEM.",
+      "image": "products/ergalia-02.jpg",
+      "w": 1100,
+      "h": 1100,
+      "source_image": "https://www.malliris.gr/42372-thickbox_default/ergalia-kolbenschmidt-120000217001-gia-feeler-gauge-005-100-oe-.jpg"
+    },
+    {
+      "title": "ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000417001 ΓΙΑ STRIPE FOR MEASURING BEARINGS PLASTIC GAUGE OE: -",
+      "url": "https://www.malliris.gr/el/ergalia/15179-ergalia-kolbenschmidt-120000417001-gia-stripe-for-measuring-bearings-plastic-gauge-oe--4028977896880.html",
+      "brand": "KOLBENSCHMIDT",
+      "stock": "Άμεσα Διαθέσιμο",
+      "stock_class": "badge-success",
+      "price": "19,07 €",
+      "price_num": 19.07,
+      "unit": "TEM.",
+      "image": "products/ergalia-03.jpg",
+      "w": 1100,
+      "h": 1100,
+      "source_image": "https://www.malliris.gr/35247-thickbox_default/ergalia-kolbenschmidt-120000417001-gia-stripe-for-measuring-bearings-plastic-gauge-oe-.jpg"
+    },
+    {
+      "title": "ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000317002 ΓΙΑ DIAL GAUGE OE: -",
+      "url": "https://www.malliris.gr/el/ergalia/14668-ergalia-kolbenschmidt-120000317002-gia-dial-gauge-oe--4028977896903.html",
+      "brand": "KOLBENSCHMIDT",
+      "stock": "Τελευταία προϊόντα σε απόθεμα",
+      "stock_class": "badge-warning",
+      "price": "76,31 €",
+      "price_num": 76.31,
+      "unit": "TEM.",
+      "image": "products/ergalia-04.jpg",
+      "w": 1100,
+      "h": 1100,
+      "source_image": "https://www.malliris.gr/33095-thickbox_default/ergalia-kolbenschmidt-120000317002-gia-dial-gauge-oe-.jpg"
+    },
+    {
+      "title": "ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000317001 ΓΙΑ MEASURING BRIDGE 94/134/174 OE: -",
+      "url": "https://www.malliris.gr/el/ergalia/14667-ergalia-kolbenschmidt-120000317001-gia-measuring-bridge-94-134-174-oe--4028977897047.html",
+      "brand": "KOLBENSCHMIDT",
+      "stock": "Άμεσα Διαθέσιμο",
+      "stock_class": "badge-success",
+      "price": "124 €",
+      "price_num": 124.0,
+      "unit": "TEM.",
+      "image": "products/ergalia-05.jpg",
+      "w": 1100,
+      "h": 1100,
+      "source_image": "https://www.malliris.gr/33292-thickbox_default/ergalia-kolbenschmidt-120000317001-gia-measuring-bridge-94-134-174-oe-.jpg"
+    }
+  ],
+  "product_kapakia": {
+    "title": "ΚΑΠΑΚΙΑ CHINA FI-Z13DTJ ΓΙΑ FIAT 16V Z13DTJ OE: 71739601",
+    "url": "https://www.malliris.gr/el/kapakia/19784-kapakia-china-fi-z13dtj-gia-fiat-16v-z13dtj-oe-71739601.html",
+    "brand": "CHINA",
+    "brand_slug": "china",
+    "brand_logo": "brands/china.jpg",
+    "brand_page": "https://www.malliris.gr/el/brand/23-china",
+    "code": "30530",
+    "reference": "FI-Z13DTJ",
+    "factory_code": "71739601",
+    "factory_code_note": "Το malliris.gr δεν εκθέτει ξεχωριστό πεδίο 'κωδικός εργοστασίου' — χρησιμοποιήθηκε ο κύριος γνήσιος (OE) κωδικός του τίτλου· ΟΛΟΙ οι κωδικοί είναι στο oe_codes.",
+    "stock": "Τελευταία προϊόντα σε απόθεμα",
+    "stock_class": "badge-warning",
+    "price_old": "496,00 €",
+    "price_old_num": 496.0,
+    "price_new": "421,60 €",
+    "price_new_num": 421.6,
+    "discount": 15,
+    "quantity_available": 1,
+    "unit": "TEM.",
+    "vat": "ΦΠΑ GR 24%",
+    "images": [
+      {
+        "file": "products/kapakia-china-z13dtj-01.jpg",
+        "w": 1100,
+        "h": 1100,
+        "bytes": 116372
+      },
+      {
+        "file": "products/kapakia-china-z13dtj-02.jpg",
+        "w": 1100,
+        "h": 1100,
+        "bytes": 103425
+      },
+      {
+        "file": "products/kapakia-china-z13dtj-03.jpg",
+        "w": 1100,
+        "h": 1100,
+        "bytes": 66874
+      },
+      {
+        "file": "products/kapakia-china-z13dtj-04.jpg",
+        "w": 1100,
+        "h": 1100,
+        "bytes": 70316
+      }
+    ],
+    "attributes": [
+      {
+        "label": "Περιγραφή",
+        "value": "Προθερμάνσεις 8mm"
+      },
+      {
+        "label": "Βαλβίδες",
+        "value": "16"
+      },
+      {
+        "label": "Μονάδα Μέτρησης",
+        "value": "TEM."
+      }
+    ],
+    "oe_codes": [
+      "56071038",
+      "71729497",
+      "71739601",
+      "5607138",
+      "5607170",
+      "5607178",
+      "5607173",
+      "11100-M26J00"
+    ],
+    "engine_codes": [
+      "188A8",
+      "188A9",
+      "199A2",
+      "199A3",
+      "223A9",
+      "Y13DT",
+      "Z13DT",
+      "Z13DTH",
+      "Z13DTJ",
+      "OPEL",
+      "AROMEO",
+      "SUZUKI"
+    ],
+    "shipping_calc": {
+      "exists": true,
+      "fields": [
+        "Χώρα (dropdown)",
+        "ΤΚ",
+        "Υπολογισμός Μεταφορικών"
+      ],
+      "note": "Widget 'Εκτίμηση Κόστους Αποστολής' υπάρχει στο υπάρχον site (shpcalc) — διατηρείται στο sample."
+    }
+  },
+  "related_kapakia": [
+    {
+      "title": "ΚΑΠΑΚΙΑ AMC 908343 ΓΙΑ FIAT 8V 176B7 176A3 176A5 146D7 OE: 7781347",
+      "url": "https://www.malliris.gr/el/kapakia/13780-kapakia-amc-908343-gia-fiat-8v-176b7-176a3-176a5-146d7-oe-7781347-8432817083433.html",
+      "brand": "AMC",
+      "stock": "Εξαντλημένο",
+      "price_old": "934,77 €",
+      "price_new": 794.56,
+      "discount": "-15%",
+      "stock_class": "badge-danger"
+    },
+    {
+      "title": "ΚΑΠΑΚΙΑ AMC 908581 ΓΙΑ FIAT 8V 188A3 188A2 223A6 OE: 46527330",
+      "url": "https://www.malliris.gr/el/kapakia/13793-kapakia-amc-908581-gia-fiat-8v-188a3-188a2-223a6-oe-46527330-8432817085819.html",
+      "brand": "AMC",
+      "stock": "Τελευταία προϊόντα σε απόθεμα",
+      "price_old": "1.001,54 €",
+      "price_new": 851.31,
+      "discount": "-15%",
+      "stock_class": "badge-warning"
+    },
+    {
+      "title": "ΚΑΠΑΚΙΑ CHINA MR-602/INJ ΓΙΑ MERCEDES 10V 602 980/981/982 (INJECT.) OE: 6020108520",
+      "url": "https://www.malliris.gr/el/kapakia/15295-kapakia-china-mr-602-inj-gia-mercedes-10v-602-980-981-982-inject-oe-6020108520.html",
+      "brand": "CHINA",
+      "stock": "Άμεσα Διαθέσιμο",
+      "price_old": "915,69 €",
+      "price_new": 778.34,
+      "discount": "-15%",
+      "stock_class": "badge-success"
+    },
+    {
+      "title": "ΚΑΠΑΚΙΑ CHINA MR-274 ΓΙΑ MERCEDES 16V 274 OE: 2740107104",
+      "url": "https://www.malliris.gr/el/kapakia/16151-kapakia-china-mr-274-gia-mercedes-16v-274-oe-2740107104.html",
+      "brand": "CHINA",
+      "stock": "Άμεσα Διαθέσιμο",
+      "price_old": "1.106,46 €",
+      "price_new": 940.49,
+      "discount": "-15%",
+      "stock_class": "badge-success"
+    },
+    {
+      "title": "ΚΑΠΑΚΙΑ CHINA AD-AAB ΓΙΑ AUDI/VW 10V AAB (YDR.OST.) OE: 074103351A",
+      "url": "https://www.malliris.gr/el/kapakia/6489-kapakia-china-ad-aab-gia-audi-vw-10v-aab-ydrost-oe-074103351a.html",
+      "brand": "CHINA",
+      "stock": "Άμεσα Διαθέσιμο",
+      "price_old": "572,31 €",
+      "price_new": 486.46,
+      "discount": "-15%",
+      "stock_class": "badge-success"
+    }
+  ],
+  "banners_ref": [
+    {
+      "name": "50 χρόνια εμπειρίας",
+      "file": "banners/ref-50xronia.jpg",
+      "w": 1390,
+      "h": 1014,
+      "bytes": 360058,
+      "source": "https://www.malliris.gr/upload/afternet-ps-slider/grid-bannerGR_bg_image_2_35.jpg"
+    },
+    {
+      "name": "Τεχνολογία αιχμής (DHL)",
+      "file": "banners/ref-dhl.png",
+      "w": 700,
+      "h": 245,
+      "bytes": 227257,
+      "source": "https://www.malliris.gr/img/cms/700x245-DHL_gr (1).png"
+    },
+    {
+      "name": "stock προϊόντων",
+      "file": "banners/ref-stock.jpg",
+      "w": 337,
+      "h": 242,
+      "bytes": 63935,
+      "source": "https://www.malliris.gr/img/cms/grid-banner---3_1.jpg"
+    },
+    {
+      "name": "όλο τον κόσμο (παραλαβές)",
+      "file": "banners/ref-paralaves.jpg",
+      "w": 337,
+      "h": 242,
+      "bytes": 53788,
+      "source": "https://www.malliris.gr/img/cms/grid-banner---4_1.jpg"
+    }
+  ]
+}

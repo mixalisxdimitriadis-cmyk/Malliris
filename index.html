@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ανταλλακτικά κινητήρων αυτοκινήτου | malliris.gr</title>
+  <meta name="description" content="Ανταλλακτικά κινητήρα: έμβολα, χιτώνια, καπάκια, στρόφαλοι, βαλβίδες. 50 χρόνια εμπειρίας, εβδομαδιαίες παραλαβές, μεγάλο στοκ.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER v2 — κοινό σε όλες τις σελίδες (αντιγράφεται αυτούσιο από partials/header.html) -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-row">
+      <a href="index.html" class="header-logo" aria-label="Malliris.gr — Αρχική">
+        <img src="assets/img/logo/logo-malliris-v2.png" alt="Malliris.gr">
+      </a>
+
+      <nav class="main-nav" aria-label="Κύριο μενού">
+        <!-- ΑΡΙΣΤΕΡΑ «Προϊόντα»: ΕΠΑΝΑΦΟΡΑ ΤΟΥ ΠΑΛΙΟΥ (v1) MENU — 29 κατηγορίες σε grid 4 στηλών.
+             Το δεξί κουμπί «Προϊόντα» ανοίγει το νέο (v2/v3) μενού με τα tabs. -->
+        <div class="nav-item has-mega">
+          <button type="button" class="nav-link" data-mega="productsOld" aria-expanded="false" aria-controls="megaProductsOld">
+            Προϊόντα <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="mega-menu" id="megaProductsOld">
+            <div class="mega-grid">
+              <a class="mega-item" href="https://www.malliris.gr/el/42-antlies-ladiou" target="_blank" rel="noopener"><i class="bi bi-droplet"></i><span>ΑΝΤΛΙΕΣ ΛΑΔΙΟΥ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/32-valvides" target="_blank" rel="noopener"><i class="bi bi-sliders"></i><span>ΒΑΛΒΙΔΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/55-vides" target="_blank" rel="noopener"><i class="bi bi-nut"></i><span>ΒΙΔΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/41-edres" target="_blank" rel="noopener"><i class="bi bi-circle"></i><span>ΕΔΡΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/44-εκκεντροφοροι" target="_blank" rel="noopener"><i class="bi bi-gear"></i><span>ΕΚΚΕΝΤΡΟΦΟΡΟΙ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/38-elatiria" target="_blank" rel="noopener"><i class="bi bi-arrow-repeat"></i><span>ΕΛΑΤΗΡΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/35-emvola" target="_blank" rel="noopener"><i class="bi bi-circle-square"></i><span>ΕΜΒΟΛΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/63-ergalia" target="_blank" rel="noopener"><i class="bi bi-tools"></i><span>ΕΡΓΑΛΕΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/53-kapakia" target="_blank" rel="noopener"><i class="bi bi-layers"></i><span>ΚΑΠΑΚΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/48-karter" target="_blank" rel="noopener"><i class="bi bi-box"></i><span>ΚΑΡΤΕΡ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/45-kokkorakia" target="_blank" rel="noopener"><i class="bi bi-disc"></i><span>ΚΟΚΚΟΡΑΚΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/54-kolles" target="_blank" rel="noopener"><i class="bi bi-droplet-half"></i><span>ΚΟΛΛΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/40-kouzineta" target="_blank" rel="noopener"><i class="bi bi-record-circle"></i><span>ΚΟΥΖΙΝΕΤΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/47-lipantika" target="_blank" rel="noopener"><i class="bi bi-droplet"></i><span>ΛΙΠΑΝΤΙΚΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/36-masouria" target="_blank" rel="noopener"><i class="bi bi-rulers"></i><span>ΜΑΣΟΥΡΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/50-μπιελες" target="_blank" rel="noopener"><i class="bi bi-slash-lg"></i><span>ΜΠΙΕΛΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/67-blok" target="_blank" rel="noopener"><i class="bi bi-bounding-box"></i><span>ΜΠΛΟΚ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/33-odigi" target="_blank" rel="noopener"><i class="bi bi-signpost"></i><span>ΟΔΗΓΟΙ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/60-pirofouskes" target="_blank" rel="noopener"><i class="bi bi-fire"></i><span>ΠΥΡΟΦΟΥΣΚΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/43-set-xronismou" target="_blank" rel="noopener"><i class="bi bi-clock-history"></i><span>ΣΕΤ ΧΡΟΝΙΣΜΟΥ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/62-σμυριδαλοιφες" target="_blank" rel="noopener"><i class="bi bi-brush"></i><span>ΣΜΥΡΙΔΑΛΟΙΦΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/39-spri" target="_blank" rel="noopener"><i class="bi bi-wind"></i><span>ΣΠΡΕΙ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/49-strofali" target="_blank" rel="noopener"><i class="bi bi-arrow-left-right"></i><span>ΣΤΡΟΦΑΛΟΙ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/52-tapes" target="_blank" rel="noopener"><i class="bi bi-circle-half"></i><span>ΤΑΠΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/66-tsimouxes" target="_blank" rel="noopener"><i class="bi bi-circle-dashed"></i><span>ΤΣΙΜΟΥΧΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/51-tsimouxakia" target="_blank" rel="noopener"><i class="bi bi-circle-square"></i><span>ΤΣΙΜΟΥΧΑΚΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/56-flantzes" target="_blank" rel="noopener"><i class="bi bi-square"></i><span>ΦΛΑΝΤΖΕΣ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/37-xitonia" target="_blank" rel="noopener"><i class="bi bi-archive"></i><span>ΧΙΤΩΝΙΑ</span></a>
+              <a class="mega-item" href="https://www.malliris.gr/el/46-ostiria" target="_blank" rel="noopener"><i class="bi bi-pushpin"></i><span>ΩΣΤΗΡΙΑ</span></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="nav-link">Η Εταιρεία</a>
+        <button type="button" class="nav-trigger" data-mega="brands" aria-expanded="false" aria-controls="megaBrands">
+          Κατασκευαστές <i class="bi bi-chevron-down"></i>
+        </button>
+        <a href="#" class="nav-link">Επικοινωνία</a>
+      </nav>
+
+      <form class="header-search" role="search" onsubmit="return false;">
+        <div class="search-wrap">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input type="search" aria-label="Αναζήτηση προϊόντος" placeholder="Κωδικός ή τύπος κινητήρα ή γνήσιο κωδ.">
+        </div>
+      </form>
+
+      <div class="header-icons">
+        <a href="#" class="icon-btn" aria-label="Ο λογαριασμός μου"><i class="bi bi-person"></i></a>
+        <a href="#" class="icon-btn" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></a>
+        <a href="#" class="icon-btn" aria-label="Καλάθι"><i class="bi bi-cart2"></i><span class="count">0</span></a>
+        <button type="button" class="btn-products" data-mega="products" aria-expanded="false" aria-controls="megaProducts">
+          <i class="bi bi-grid-3x3-gap"></i> Προϊόντα
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Μενού" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEGA-MENU «ΠΡΟΪΟΝΤΑ» — ένα component, ανοίγει από το nav και από το κουμπί δεξιά -->
+  <div class="mega-products" id="megaProducts">
+    <div class="mp-inner">
+      <div class="mp-tabs" role="tablist">
+            <button class="mp-tab is-active" type="button" role="tab" data-tab="kapakia" aria-selected="true">Καπάκια &amp; Κεφαλή</button>
+            <button class="mp-tab" type="button" role="tab" data-tab="kinoumena" aria-selected="false">Κινούμενα Μέρη</button>
+            <button class="mp-tab" type="button" role="tab" data-tab="xronismos" aria-selected="false">Χρονισμός &amp; Λίπανση</button>
+            <button class="mp-tab" type="button" role="tab" data-tab="ergaleia" aria-selected="false">Εργαλεία &amp; Αναλώσιμα</button>
+      </div>
+        <div class="mp-pane is-active" data-pane="kapakia" role="tabpanel">
+          <div class="mp-left">
+            <div class="mp-cols">
+                <div class="mp-col">
+                  <h4>Κεφαλή κινητήρα</h4>
+                  <ul>
+                    <li><a href="category.html?cat=53-kapakia">ΚΑΠΑΚΙΑ</a></li>
+                    <li><a href="category.html?cat=32-valvides">ΒΑΛΒΙΔΕΣ</a></li>
+                    <li><a href="category.html?cat=38-elatiria">ΕΛΑΤΗΡΙΑ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Βαλβιδικός μηχανισμός</h4>
+                  <ul>
+                    <li><a href="category.html?cat=46-ostiria">ΩΣΤΗΡΙΑ</a></li>
+                    <li><a href="category.html?cat=33-odigi">ΟΔΗΓΟΙ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Στεγάνωση κεφαλής</h4>
+                  <ul>
+                    <li><a href="category.html?cat=51-tsimouxakia">ΤΣΙΜΟΥΧΑΚΙΑ</a></li>
+                    <li><a href="category.html?cat=56-flantzes">ΦΛΑΝΤΖΕΣ</a></li>
+                  </ul>
+                </div>
+            </div>
+            <p class="mp-foot">Δεν βρίσκεις αυτό που ψάχνεις; <a href="category.html?cat=53-kapakia">Δες όλα: ΚΑΠΑΚΙΑ <i class="bi bi-arrow-right"></i></a></p>
+          </div>
+          <div class="mp-media">
+            <!-- ΦΩΤΟΓΡΑΦΙΑ ΚΑΤΗΓΟΡΙΑΣ «kapakia» — για αντικατάσταση: βάλε <img src="assets/img/categories/kapakia.jpg" alt="">
+                 σε διαστάσεις 430×640 και σβήσε το div.mp-ph από κάτω. -->
+            <img class="mp-img" src="" alt="CATEGORY IMAGE — 430×640" aria-hidden="true">
+            <div class="mp-ph">CATEGORY IMAGE — 430×640</div>
+          </div>
+        </div>
+        <div class="mp-pane" data-pane="kinoumena" role="tabpanel">
+          <div class="mp-left">
+            <div class="mp-cols">
+                <div class="mp-col">
+                  <h4>Πιστόνια &amp; χιτώνια</h4>
+                  <ul>
+                    <li><a href="category.html?cat=35-emvola">ΕΜΒΟΛΑ</a></li>
+                    <li><a href="category.html?cat=37-xitonia">ΧΙΤΩΝΙΑ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Διωστήρες &amp; έδρανα</h4>
+                  <ul>
+                    <li><a href="category.html?cat=50-μπιελες">ΜΠΙΕΛΕΣ</a></li>
+                    <li><a href="category.html?cat=40-kouzineta">ΚΟΥΖΙΝΕΤΑ</a></li>
+                    <li><a href="category.html?cat=41-edres">ΕΔΡΕΣ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Στρόφαλος &amp; μπλοκ</h4>
+                  <ul>
+                    <li><a href="category.html?cat=49-strofali">ΣΤΡΟΦΑΛΟΙ</a></li>
+                    <li><a href="category.html?cat=67-blok">ΜΠΛΟΚ</a></li>
+                  </ul>
+                </div>
+            </div>
+            <p class="mp-foot">Δεν βρίσκεις αυτό που ψάχνεις; <a href="category.html?cat=35-emvola">Δες όλα: ΕΜΒΟΛΑ <i class="bi bi-arrow-right"></i></a></p>
+          </div>
+          <div class="mp-media">
+            <!-- ΦΩΤΟΓΡΑΦΙΑ ΚΑΤΗΓΟΡΙΑΣ «kinoumena» — για αντικατάσταση: βάλε <img src="assets/img/categories/kinoumena.jpg" alt="">
+                 σε διαστάσεις 430×640 και σβήσε το div.mp-ph από κάτω. -->
+            <img class="mp-img" src="" alt="CATEGORY IMAGE — 430×640" aria-hidden="true">
+            <div class="mp-ph">CATEGORY IMAGE — 430×640</div>
+          </div>
+        </div>
+        <div class="mp-pane" data-pane="xronismos" role="tabpanel">
+          <div class="mp-left">
+            <div class="mp-cols">
+                <div class="mp-col">
+                  <h4>Χρονισμός</h4>
+                  <ul>
+                    <li><a href="category.html?cat=44-εκκεντροφοροι">ΕΚΚΕΝΤΡΟΦΟΡΟΙ</a></li>
+                    <li><a href="category.html?cat=43-set-xronismou">ΣΕΤ ΧΡΟΝΙΣΜΟΥ</a></li>
+                    <li><a href="category.html?cat=36-masouria">ΜΑΣΟΥΡΙΑ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Λίπανση</h4>
+                  <ul>
+                    <li><a href="category.html?cat=42-antlies-ladiou">ΑΝΤΛΙΕΣ ΛΑΔΙΟΥ</a></li>
+                    <li><a href="category.html?cat=48-karter">ΚΑΡΤΕΡ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Κάρτερ &amp; στεγάνωση</h4>
+                  <ul>
+                    <li><a href="category.html?cat=52-tapes">ΤΑΠΕΣ</a></li>
+                    <li><a href="category.html?cat=60-pirofouskes">ΠΥΡΟΦΟΥΣΚΕΣ</a></li>
+                  </ul>
+                </div>
+            </div>
+            <p class="mp-foot">Δεν βρίσκεις αυτό που ψάχνεις; <a href="category.html?cat=44-εκκεντροφοροι">Δες όλα: ΕΚΚΕΝΤΡΟΦΟΡΟΙ <i class="bi bi-arrow-right"></i></a></p>
+          </div>
+          <div class="mp-media">
+            <!-- ΦΩΤΟΓΡΑΦΙΑ ΚΑΤΗΓΟΡΙΑΣ «xronismos» — για αντικατάσταση: βάλε <img src="assets/img/categories/xronismos.jpg" alt="">
+                 σε διαστάσεις 430×640 και σβήσε το div.mp-ph από κάτω. -->
+            <img class="mp-img" src="" alt="CATEGORY IMAGE — 430×640" aria-hidden="true">
+            <div class="mp-ph">CATEGORY IMAGE — 430×640</div>
+          </div>
+        </div>
+        <div class="mp-pane" data-pane="ergaleia" role="tabpanel">
+          <div class="mp-left">
+            <div class="mp-cols">
+                <div class="mp-col">
+                  <h4>Εργαλεία &amp; συνδετικά</h4>
+                  <ul>
+                    <li><a href="category.html?cat=63-ergalia">ΕΡΓΑΛΕΙΑ</a></li>
+                    <li><a href="category.html?cat=55-vides">ΒΙΔΕΣ</a></li>
+                    <li><a href="category.html?cat=66-tsimouxes">ΤΣΙΜΟΥΧΕΣ</a></li>
+                    <li><a href="category.html?cat=45-kokkorakia">ΚΟΚΚΟΡΑΚΙΑ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Χημικά &amp; κόλλες</h4>
+                  <ul>
+                    <li><a href="category.html?cat=54-kolles">ΚΟΛΛΕΣ</a></li>
+                    <li><a href="category.html?cat=62-σμυριδαλοιφες">ΣΜΥΡΙΔΑΛΟΙΦΕΣ</a></li>
+                  </ul>
+                </div>
+                <div class="mp-col">
+                  <h4>Σπρέι &amp; λιπαντικά</h4>
+                  <ul>
+                    <li><a href="category.html?cat=39-spri">ΣΠΡΕΙ</a></li>
+                    <li><a href="category.html?cat=47-lipantika">ΛΙΠΑΝΤΙΚΑ</a></li>
+                  </ul>
+                </div>
+            </div>
+            <p class="mp-foot">Δεν βρίσκεις αυτό που ψάχνεις; <a href="category.html?cat=63-ergalia">Δες όλα: ΕΡΓΑΛΕΙΑ <i class="bi bi-arrow-right"></i></a></p>
+          </div>
+          <div class="mp-media">
+            <!-- ΦΩΤΟΓΡΑΦΙΑ ΚΑΤΗΓΟΡΙΑΣ «ergaleia» — για αντικατάσταση: βάλε <img src="assets/img/categories/ergaleia.jpg" alt="">
+                 σε διαστάσεις 430×640 και σβήσε το div.mp-ph από κάτω. -->
+            <img class="mp-img" src="" alt="CATEGORY IMAGE — 430×640" aria-hidden="true">
+            <div class="mp-ph">CATEGORY IMAGE — 430×640</div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- MEGA-MENU «ΚΑΤΑΣΚΕΥΑΣΤΕΣ» — όλα τα λογότυπα του project -->
+  <div class="mega-brands" id="megaBrands">
+    <div class="mb-inner">
+      <p class="mb-title">Κατασκευαστές (68)</p>
+      <div class="mb-grid">
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/17-amc" target="_blank" rel="noopener" title="AMC"><img src="assets/img/brands/amc.jpg" alt="AMC" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/5-kolbenschmidt" target="_blank" rel="noopener" title="KOLBENSCHMIDT"><img src="assets/img/brands/kolbenschmidt.jpg" alt="KOLBENSCHMIDT" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/6-tp" target="_blank" rel="noopener" title="TP"><img src="assets/img/brands/tp.jpg" alt="TP" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/1-freccia" target="_blank" rel="noopener" title="FRECCIA"><img src="assets/img/brands/freccia.jpg" alt="FRECCIA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/14-taiho" target="_blank" rel="noopener" title="TAIHO"><img src="assets/img/brands/taiho.jpg" alt="TAIHO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/11-bga" target="_blank" rel="noopener" title="BGA"><img src="assets/img/brands/bga.jpg" alt="BGA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/42-hastings" target="_blank" rel="noopener" title="HASTINGS"><img src="assets/img/brands/hastings.jpg" alt="HASTINGS" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/52-stone" target="_blank" rel="noopener" title="STONE"><img src="assets/img/brands/stone.jpg" alt="STONE" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/2-ivam" target="_blank" rel="noopener" title="IVAM"><img src="assets/img/brands/ivam.jpg" alt="IVAM" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/62-elring" target="_blank" rel="noopener" title="ELRING"><img src="assets/img/brands/elring.jpg" alt="ELRING" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/3-sachs" target="_blank" rel="noopener" title="SACHS"><img src="assets/img/brands/sachs.jpg" alt="SACHS" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/4-jcc" target="_blank" rel="noopener" title="JCC"><img src="assets/img/brands/jcc.jpg" alt="JCC" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/7-morris" target="_blank" rel="noopener" title="MORRIS"><img src="assets/img/brands/morris.jpg" alt="MORRIS" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/8-trw" target="_blank" rel="noopener" title="TRW"><img src="assets/img/brands/trw.jpg" alt="TRW" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/9-osk" target="_blank" rel="noopener" title="OSK"><img src="assets/img/brands/osk.jpg" alt="OSK" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/10-aisin" target="_blank" rel="noopener" title="AISIN"><img src="assets/img/brands/aisin.jpg" alt="AISIN" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/12-febi" target="_blank" rel="noopener" title="FEBI"><img src="assets/img/brands/febi.jpg" alt="FEBI" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/13-genmot" target="_blank" rel="noopener" title="GENMOT"><img src="assets/img/brands/genmot.jpg" alt="GENMOT" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/15-kibi" target="_blank" rel="noopener" title="KIBI"><img src="assets/img/brands/kibi.jpg" alt="KIBI" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/16-metalcaucho" target="_blank" rel="noopener" title="METALCAUCHO"><img src="assets/img/brands/metalcaucho.jpg" alt="METALCAUCHO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/18-athena" target="_blank" rel="noopener" title="ATHENA"><img src="assets/img/brands/athena.jpg" alt="ATHENA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/19-reinz" target="_blank" rel="noopener" title="REINZ"><img src="assets/img/brands/reinz.jpg" alt="REINZ" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/20-textar" target="_blank" rel="noopener" title="TEXTAR"><img src="assets/img/brands/textar.jpg" alt="TEXTAR" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/21-denso" target="_blank" rel="noopener" title="DENSO"><img src="assets/img/brands/denso.jpg" alt="DENSO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/22-sonne" target="_blank" rel="noopener" title="SONNE"><img src="assets/img/brands/sonne.jpg" alt="SONNE" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/23-china" target="_blank" rel="noopener" title="CHINA"><img src="assets/img/brands/china.jpg" alt="CHINA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/24-fuji" target="_blank" rel="noopener" title="FUJI"><img src="assets/img/brands/fuji.jpg" alt="FUJI" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/25-dokuro" target="_blank" rel="noopener" title="DOKURO"><img src="assets/img/brands/dokuro.jpg" alt="DOKURO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/26-npr" target="_blank" rel="noopener" title="NPR"><img src="assets/img/brands/npr.jpg" alt="NPR" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/27-npr-race" target="_blank" rel="noopener" title="NPR RACE"><img src="assets/img/brands/npr-race.jpg" alt="NPR RACE" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/28-smy" target="_blank" rel="noopener" title="SMY"><img src="assets/img/brands/smy.jpg" alt="SMY" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/29-hepolite" target="_blank" rel="noopener" title="HEPOLITE"><img src="assets/img/brands/hepolite.jpg" alt="HEPOLITE" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/31-art" target="_blank" rel="noopener" title="ART"><img src="assets/img/brands/art.jpg" alt="ART" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/33-toto" target="_blank" rel="noopener" title="TOTO"><img src="assets/img/brands/toto.jpg" alt="TOTO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/34-ndc" target="_blank" rel="noopener" title="NDC"><img src="assets/img/brands/ndc.jpg" alt="NDC" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/35-mazda" target="_blank" rel="noopener" title="MAZDA"><img src="assets/img/brands/mazda.jpg" alt="MAZDA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/37-toyota" target="_blank" rel="noopener" title="TOYOTA"><img src="assets/img/brands/toyota.jpg" alt="TOYOTA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/39-paraut" target="_blank" rel="noopener" title="PARAUT"><img src="assets/img/brands/paraut.jpg" alt="PARAUT" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/40-mitsubishi" target="_blank" rel="noopener" title="MITSUBISHI"><img src="assets/img/brands/mitsubishi.jpg" alt="MITSUBISHI" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/41-febi-ina" target="_blank" rel="noopener" title="FEBI-INA"><img src="assets/img/brands/febi-ina.jpg" alt="FEBI-INA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/43-king" target="_blank" rel="noopener" title="KING"><img src="assets/img/brands/king.jpg" alt="KING" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/44-kiwi" target="_blank" rel="noopener" title="KIWI"><img src="assets/img/brands/kiwi.jpg" alt="KIWI" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/45-daido" target="_blank" rel="noopener" title="DAIDO"><img src="assets/img/brands/daido.jpg" alt="DAIDO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/46-acl-race" target="_blank" rel="noopener" title="ACL RACE"><img src="assets/img/brands/acl-race.jpg" alt="ACL RACE" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/47-acl" target="_blank" rel="noopener" title="ACL"><img src="assets/img/brands/acl.jpg" alt="ACL" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/49-glaser" target="_blank" rel="noopener" title="GLASER"><img src="assets/img/brands/glaser.jpg" alt="GLASER" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/50-ajusa" target="_blank" rel="noopener" title="AJUSA"><img src="assets/img/brands/ajusa.jpg" alt="AJUSA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/51-eristic" target="_blank" rel="noopener" title="ERISTIC"><img src="assets/img/brands/eristic.jpg" alt="ERISTIC" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/53-fai" target="_blank" rel="noopener" title="FAI"><img src="assets/img/brands/fai.jpg" alt="FAI" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/54-king-race" target="_blank" rel="noopener" title="KING RACE"><img src="assets/img/brands/king-race.jpg" alt="KING RACE" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/59-ina" target="_blank" rel="noopener" title="INA"><img src="assets/img/brands/ina.jpg" alt="INA" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/60-castrol" target="_blank" rel="noopener" title="CASTROL"><img src="assets/img/brands/castrol.jpg" alt="CASTROL" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/61-skf" target="_blank" rel="noopener" title="SKF"><img src="assets/img/brands/skf.jpg" alt="SKF" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/63-payen" target="_blank" rel="noopener" title="PAYEN"><img src="assets/img/brands/payen.jpg" alt="PAYEN" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/64-pierburg" target="_blank" rel="noopener" title="PIERBURG"><img src="assets/img/brands/pierburg.jpg" alt="PIERBURG" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/66-blueprint" target="_blank" rel="noopener" title="BLUEPRINT"><img src="assets/img/brands/blueprint.jpg" alt="BLUEPRINT" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/67-illinois" target="_blank" rel="noopener" title="ILLINOIS"><img src="assets/img/brands/illinois.jpg" alt="ILLINOIS" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/68-opel" target="_blank" rel="noopener" title="OPEL"><img src="assets/img/brands/opel.jpg" alt="OPEL" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/71-glyco" target="_blank" rel="noopener" title="GLYCO"><img src="assets/img/brands/glyco.jpg" alt="GLYCO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/72-mercedes" target="_blank" rel="noopener" title="MERCEDES"><img src="assets/img/brands/mercedes.jpg" alt="MERCEDES" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/73-bilstein" target="_blank" rel="noopener" title="BILSTEIN"><img src="assets/img/brands/bilstein.jpg" alt="BILSTEIN" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/74-ngk" target="_blank" rel="noopener" title="NGK"><img src="assets/img/brands/ngk.jpg" alt="NGK" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/75-kaco" target="_blank" rel="noopener" title="KACO"><img src="assets/img/brands/kaco.jpg" alt="KACO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/76-tto" target="_blank" rel="noopener" title="TTO"><img src="assets/img/brands/tto.jpg" alt="TTO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/77-permatex" target="_blank" rel="noopener" title="PERMATEX"><img src="assets/img/brands/permatex.jpg" alt="PERMATEX" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/78-muller" target="_blank" rel="noopener" title="MULLER"><img src="assets/img/brands/muller.jpg" alt="MULLER" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/79-mando" target="_blank" rel="noopener" title="MANDO"><img src="assets/img/brands/mando.jpg" alt="MANDO" loading="lazy"></a>
+        <a class="mb-cell" href="https://www.malliris.gr/el/brand/82-teikin" target="_blank" rel="noopener" title="TEIKIN"><img src="assets/img/brands/teikin.jpg" alt="TEIKIN" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU — mega-menus ως αναδιπλούμενες λίστες -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="container" style="padding-top:6px;padding-bottom:10px">
+      <div class="mm-group mm-tabs">
+          <details>
+            <summary class="mm-summary">Καπάκια &amp; Κεφαλή <i class="bi bi-chevron-down mm-chev"></i></summary>
+            <div class="mm-body">
+            <p class="mm-h5">Κεφαλή κινητήρα</p>
+              <a class="mm-link" href="category.html?cat=53-kapakia">ΚΑΠΑΚΙΑ</a>
+              <a class="mm-link" href="category.html?cat=32-valvides">ΒΑΛΒΙΔΕΣ</a>
+              <a class="mm-link" href="category.html?cat=38-elatiria">ΕΛΑΤΗΡΙΑ</a>
+            <p class="mm-h5">Βαλβιδικός μηχανισμός</p>
+              <a class="mm-link" href="category.html?cat=46-ostiria">ΩΣΤΗΡΙΑ</a>
+              <a class="mm-link" href="category.html?cat=33-odigi">ΟΔΗΓΟΙ</a>
+            <p class="mm-h5">Στεγάνωση κεφαλής</p>
+              <a class="mm-link" href="category.html?cat=51-tsimouxakia">ΤΣΙΜΟΥΧΑΚΙΑ</a>
+              <a class="mm-link" href="category.html?cat=56-flantzes">ΦΛΑΝΤΖΕΣ</a>
+            </div>
+          </details>
+          <details>
+            <summary class="mm-summary">Κινούμενα Μέρη <i class="bi bi-chevron-down mm-chev"></i></summary>
+            <div class="mm-body">
+            <p class="mm-h5">Πιστόνια &amp; χιτώνια</p>
+              <a class="mm-link" href="category.html?cat=35-emvola">ΕΜΒΟΛΑ</a>
+              <a class="mm-link" href="category.html?cat=37-xitonia">ΧΙΤΩΝΙΑ</a>
+            <p class="mm-h5">Διωστήρες &amp; έδρανα</p>
+              <a class="mm-link" href="category.html?cat=50-μπιελες">ΜΠΙΕΛΕΣ</a>
+              <a class="mm-link" href="category.html?cat=40-kouzineta">ΚΟΥΖΙΝΕΤΑ</a>
+              <a class="mm-link" href="category.html?cat=41-edres">ΕΔΡΕΣ</a>
+            <p class="mm-h5">Στρόφαλος &amp; μπλοκ</p>
+              <a class="mm-link" href="category.html?cat=49-strofali">ΣΤΡΟΦΑΛΟΙ</a>
+              <a class="mm-link" href="category.html?cat=67-blok">ΜΠΛΟΚ</a>
+            </div>
+          </details>
+          <details>
+            <summary class="mm-summary">Χρονισμός &amp; Λίπανση <i class="bi bi-chevron-down mm-chev"></i></summary>
+            <div class="mm-body">
+            <p class="mm-h5">Χρονισμός</p>
+              <a class="mm-link" href="category.html?cat=44-εκκεντροφοροι">ΕΚΚΕΝΤΡΟΦΟΡΟΙ</a>
+              <a class="mm-link" href="category.html?cat=43-set-xronismou">ΣΕΤ ΧΡΟΝΙΣΜΟΥ</a>
+              <a class="mm-link" href="category.html?cat=36-masouria">ΜΑΣΟΥΡΙΑ</a>
+            <p class="mm-h5">Λίπανση</p>
+              <a class="mm-link" href="category.html?cat=42-antlies-ladiou">ΑΝΤΛΙΕΣ ΛΑΔΙΟΥ</a>
+              <a class="mm-link" href="category.html?cat=48-karter">ΚΑΡΤΕΡ</a>
+            <p class="mm-h5">Κάρτερ &amp; στεγάνωση</p>
+              <a class="mm-link" href="category.html?cat=52-tapes">ΤΑΠΕΣ</a>
+              <a class="mm-link" href="category.html?cat=60-pirofouskes">ΠΥΡΟΦΟΥΣΚΕΣ</a>
+            </div>
+          </details>
+          <details>
+            <summary class="mm-summary">Εργαλεία &amp; Αναλώσιμα <i class="bi bi-chevron-down mm-chev"></i></summary>
+            <div class="mm-body">
+            <p class="mm-h5">Εργαλεία &amp; συνδετικά</p>
+              <a class="mm-link" href="category.html?cat=63-ergalia">ΕΡΓΑΛΕΙΑ</a>
+              <a class="mm-link" href="category.html?cat=55-vides">ΒΙΔΕΣ</a>
+              <a class="mm-link" href="category.html?cat=66-tsimouxes">ΤΣΙΜΟΥΧΕΣ</a>
+              <a class="mm-link" href="category.html?cat=45-kokkorakia">ΚΟΚΚΟΡΑΚΙΑ</a>
+            <p class="mm-h5">Χημικά &amp; κόλλες</p>
+              <a class="mm-link" href="category.html?cat=54-kolles">ΚΟΛΛΕΣ</a>
+              <a class="mm-link" href="category.html?cat=62-σμυριδαλοιφες">ΣΜΥΡΙΔΑΛΟΙΦΕΣ</a>
+            <p class="mm-h5">Σπρέι &amp; λιπαντικά</p>
+              <a class="mm-link" href="category.html?cat=39-spri">ΣΠΡΕΙ</a>
+              <a class="mm-link" href="category.html?cat=47-lipantika">ΛΙΠΑΝΤΙΚΑ</a>
+            </div>
+          </details>
+      </div>
+      <div class="mm-group">
+        <details>
+          <summary class="mm-summary">Κατασκευαστές <i class="bi bi-chevron-down mm-chev"></i></summary>
+          <div class="mm-body">
+            <div class="mm-brands">
+        <a href="https://www.malliris.gr/el/brand/17-amc" target="_blank" rel="noopener"><img src="assets/img/brands/amc.jpg" alt="AMC" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/5-kolbenschmidt" target="_blank" rel="noopener"><img src="assets/img/brands/kolbenschmidt.jpg" alt="KOLBENSCHMIDT" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/6-tp" target="_blank" rel="noopener"><img src="assets/img/brands/tp.jpg" alt="TP" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/1-freccia" target="_blank" rel="noopener"><img src="assets/img/brands/freccia.jpg" alt="FRECCIA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/14-taiho" target="_blank" rel="noopener"><img src="assets/img/brands/taiho.jpg" alt="TAIHO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/11-bga" target="_blank" rel="noopener"><img src="assets/img/brands/bga.jpg" alt="BGA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/42-hastings" target="_blank" rel="noopener"><img src="assets/img/brands/hastings.jpg" alt="HASTINGS" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/52-stone" target="_blank" rel="noopener"><img src="assets/img/brands/stone.jpg" alt="STONE" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/2-ivam" target="_blank" rel="noopener"><img src="assets/img/brands/ivam.jpg" alt="IVAM" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/62-elring" target="_blank" rel="noopener"><img src="assets/img/brands/elring.jpg" alt="ELRING" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/3-sachs" target="_blank" rel="noopener"><img src="assets/img/brands/sachs.jpg" alt="SACHS" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/4-jcc" target="_blank" rel="noopener"><img src="assets/img/brands/jcc.jpg" alt="JCC" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/7-morris" target="_blank" rel="noopener"><img src="assets/img/brands/morris.jpg" alt="MORRIS" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/8-trw" target="_blank" rel="noopener"><img src="assets/img/brands/trw.jpg" alt="TRW" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/9-osk" target="_blank" rel="noopener"><img src="assets/img/brands/osk.jpg" alt="OSK" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/10-aisin" target="_blank" rel="noopener"><img src="assets/img/brands/aisin.jpg" alt="AISIN" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/12-febi" target="_blank" rel="noopener"><img src="assets/img/brands/febi.jpg" alt="FEBI" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/13-genmot" target="_blank" rel="noopener"><img src="assets/img/brands/genmot.jpg" alt="GENMOT" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/15-kibi" target="_blank" rel="noopener"><img src="assets/img/brands/kibi.jpg" alt="KIBI" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/16-metalcaucho" target="_blank" rel="noopener"><img src="assets/img/brands/metalcaucho.jpg" alt="METALCAUCHO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/18-athena" target="_blank" rel="noopener"><img src="assets/img/brands/athena.jpg" alt="ATHENA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/19-reinz" target="_blank" rel="noopener"><img src="assets/img/brands/reinz.jpg" alt="REINZ" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/20-textar" target="_blank" rel="noopener"><img src="assets/img/brands/textar.jpg" alt="TEXTAR" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/21-denso" target="_blank" rel="noopener"><img src="assets/img/brands/denso.jpg" alt="DENSO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/22-sonne" target="_blank" rel="noopener"><img src="assets/img/brands/sonne.jpg" alt="SONNE" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/23-china" target="_blank" rel="noopener"><img src="assets/img/brands/china.jpg" alt="CHINA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/24-fuji" target="_blank" rel="noopener"><img src="assets/img/brands/fuji.jpg" alt="FUJI" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/25-dokuro" target="_blank" rel="noopener"><img src="assets/img/brands/dokuro.jpg" alt="DOKURO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/26-npr" target="_blank" rel="noopener"><img src="assets/img/brands/npr.jpg" alt="NPR" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/27-npr-race" target="_blank" rel="noopener"><img src="assets/img/brands/npr-race.jpg" alt="NPR RACE" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/28-smy" target="_blank" rel="noopener"><img src="assets/img/brands/smy.jpg" alt="SMY" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/29-hepolite" target="_blank" rel="noopener"><img src="assets/img/brands/hepolite.jpg" alt="HEPOLITE" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/31-art" target="_blank" rel="noopener"><img src="assets/img/brands/art.jpg" alt="ART" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/33-toto" target="_blank" rel="noopener"><img src="assets/img/brands/toto.jpg" alt="TOTO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/34-ndc" target="_blank" rel="noopener"><img src="assets/img/brands/ndc.jpg" alt="NDC" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/35-mazda" target="_blank" rel="noopener"><img src="assets/img/brands/mazda.jpg" alt="MAZDA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/37-toyota" target="_blank" rel="noopener"><img src="assets/img/brands/toyota.jpg" alt="TOYOTA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/39-paraut" target="_blank" rel="noopener"><img src="assets/img/brands/paraut.jpg" alt="PARAUT" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/40-mitsubishi" target="_blank" rel="noopener"><img src="assets/img/brands/mitsubishi.jpg" alt="MITSUBISHI" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/41-febi-ina" target="_blank" rel="noopener"><img src="assets/img/brands/febi-ina.jpg" alt="FEBI-INA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/43-king" target="_blank" rel="noopener"><img src="assets/img/brands/king.jpg" alt="KING" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/44-kiwi" target="_blank" rel="noopener"><img src="assets/img/brands/kiwi.jpg" alt="KIWI" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/45-daido" target="_blank" rel="noopener"><img src="assets/img/brands/daido.jpg" alt="DAIDO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/46-acl-race" target="_blank" rel="noopener"><img src="assets/img/brands/acl-race.jpg" alt="ACL RACE" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/47-acl" target="_blank" rel="noopener"><img src="assets/img/brands/acl.jpg" alt="ACL" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/49-glaser" target="_blank" rel="noopener"><img src="assets/img/brands/glaser.jpg" alt="GLASER" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/50-ajusa" target="_blank" rel="noopener"><img src="assets/img/brands/ajusa.jpg" alt="AJUSA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/51-eristic" target="_blank" rel="noopener"><img src="assets/img/brands/eristic.jpg" alt="ERISTIC" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/53-fai" target="_blank" rel="noopener"><img src="assets/img/brands/fai.jpg" alt="FAI" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/54-king-race" target="_blank" rel="noopener"><img src="assets/img/brands/king-race.jpg" alt="KING RACE" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/59-ina" target="_blank" rel="noopener"><img src="assets/img/brands/ina.jpg" alt="INA" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/60-castrol" target="_blank" rel="noopener"><img src="assets/img/brands/castrol.jpg" alt="CASTROL" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/61-skf" target="_blank" rel="noopener"><img src="assets/img/brands/skf.jpg" alt="SKF" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/63-payen" target="_blank" rel="noopener"><img src="assets/img/brands/payen.jpg" alt="PAYEN" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/64-pierburg" target="_blank" rel="noopener"><img src="assets/img/brands/pierburg.jpg" alt="PIERBURG" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/66-blueprint" target="_blank" rel="noopener"><img src="assets/img/brands/blueprint.jpg" alt="BLUEPRINT" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/67-illinois" target="_blank" rel="noopener"><img src="assets/img/brands/illinois.jpg" alt="ILLINOIS" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/68-opel" target="_blank" rel="noopener"><img src="assets/img/brands/opel.jpg" alt="OPEL" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/71-glyco" target="_blank" rel="noopener"><img src="assets/img/brands/glyco.jpg" alt="GLYCO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/72-mercedes" target="_blank" rel="noopener"><img src="assets/img/brands/mercedes.jpg" alt="MERCEDES" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/73-bilstein" target="_blank" rel="noopener"><img src="assets/img/brands/bilstein.jpg" alt="BILSTEIN" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/74-ngk" target="_blank" rel="noopener"><img src="assets/img/brands/ngk.jpg" alt="NGK" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/75-kaco" target="_blank" rel="noopener"><img src="assets/img/brands/kaco.jpg" alt="KACO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/76-tto" target="_blank" rel="noopener"><img src="assets/img/brands/tto.jpg" alt="TTO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/77-permatex" target="_blank" rel="noopener"><img src="assets/img/brands/permatex.jpg" alt="PERMATEX" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/78-muller" target="_blank" rel="noopener"><img src="assets/img/brands/muller.jpg" alt="MULLER" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/79-mando" target="_blank" rel="noopener"><img src="assets/img/brands/mando.jpg" alt="MANDO" loading="lazy"></a>
+        <a href="https://www.malliris.gr/el/brand/82-teikin" target="_blank" rel="noopener"><img src="assets/img/brands/teikin.jpg" alt="TEIKIN" loading="lazy"></a>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="mm-group"><a class="mm-summary" href="#">Η Εταιρεία</a></div>
+      <div class="mm-group"><a class="mm-summary" href="#">Επικοινωνία</a></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================ A. HERO ============================ -->
+  <section class="hero">
+    <div class="ph">HERO IMAGE — 1920×520</div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>50 χρόνια εμπειρίας στα ανταλλακτικά κινητήρα</h1>
+        <p>Εβδομαδιαίες παραλαβές, μεγάλο στοκ και άριστη ποιότητα — για κάθε κινητήρα, από κάθε γωνιά του κόσμου.</p>
+        <a href="#products" class="btn-accent">Δες τα προϊόντα <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+    <div class="container">
+      <div class="info-banners">
+        <div class="info-banner">
+          <div class="ph">BANNER — 426×128</div>
+          <div class="ib-body">
+            <span class="ib-icon"><i class="bi bi-truck"></i></span>
+            <h3>Άμεση αποστολή στο χώρο σου</h3>
+            <p>Παράδοση σε όλη την Ελλάδα με courier</p>
+          </div>
+        </div>
+        <div class="info-banner">
+          <div class="ph">BANNER — 426×128</div>
+          <div class="ib-body">
+            <span class="ib-icon"><i class="bi bi-telephone"></i></span>
+            <h3>Τηλεφωνική εξυπηρέτηση 210 3472222</h3>
+            <p>Δευτέρα-Παρασκευή, 08:00-17:00</p>
+          </div>
+        </div>
+        <div class="info-banner">
+          <div class="ph">BANNER — 426×128</div>
+          <div class="ib-body">
+            <span class="ib-icon"><i class="bi bi-award"></i></span>
+            <h3>50 χρόνια εμπειρίας στα ανταλλακτικά</h3>
+            <p>Από το 1974 δίπλα στους τεχνικούς</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- ΔΥΟ ΜΕΓΑΛΑ BANNERS (v3) — ο πελάτης βάζει δικές του φωτογραφίες 642×320.
+       Για αντικατάσταση: βάλε μέσα στο div.big ένα <img src="assets/img/banners/banner-big-1.jpg" alt="">
+       και σβήσε το κείμενο/το περίγραμμα του placeholder. -->
+  <div class="container">
+    <div class="info-big">
+      <div class="big">BIG BANNER — 642×320</div>
+      <div class="big">BIG BANNER — 642×320</div>
+    </div>
+  </div>
+
+  <section class="cat-products" id="products">
+    <div class="container">
+      <h2 class="section-title">Κατηγορίες Ανταλλακτικών Κινητήρα</h2>
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <aside class="cat-panel">
+            <div class="ph">SIDE IMAGE — 400×900</div>
+            <p class="cat-panel__title">Όλες οι κατηγορίες</p>
+            <ul class="cat-list">
+                    <li><a href="category.html?cat=42-antlies-ladiou"><i class="bi bi-droplet"></i><span>Αντλιες Λαδιου</span></a></li>
+                    <li><a href="category.html?cat=32-valvides"><i class="bi bi-sliders"></i><span>Βαλβιδες</span></a></li>
+                    <li><a href="category.html?cat=55-vides"><i class="bi bi-nut"></i><span>Βιδες</span></a></li>
+                    <li><a href="category.html?cat=41-edres"><i class="bi bi-circle"></i><span>Εδρες</span></a></li>
+                    <li><a href="category.html?cat=44-εκκεντροφοροι"><i class="bi bi-gear"></i><span>Εκκεντροφοροι</span></a></li>
+                    <li><a href="category.html?cat=38-elatiria"><i class="bi bi-arrow-repeat"></i><span>Ελατηρια</span></a></li>
+                    <li><a href="category.html?cat=35-emvola"><i class="bi bi-circle-square"></i><span>Εμβολα</span></a></li>
+                    <li><a href="category.html?cat=63-ergalia"><i class="bi bi-tools"></i><span>Εργαλεια</span></a></li>
+                    <li><a href="category.html?cat=53-kapakia"><i class="bi bi-layers"></i><span>Καπακια</span></a></li>
+                    <li><a href="category.html?cat=48-karter"><i class="bi bi-box"></i><span>Καρτερ</span></a></li>
+                    <li><a href="category.html?cat=45-kokkorakia"><i class="bi bi-disc"></i><span>Κοκκορακια</span></a></li>
+                    <li><a href="category.html?cat=54-kolles"><i class="bi bi-droplet-half"></i><span>Κολλες</span></a></li>
+                    <li><a href="category.html?cat=40-kouzineta"><i class="bi bi-record-circle"></i><span>Κουζινετα</span></a></li>
+                    <li><a href="category.html?cat=47-lipantika"><i class="bi bi-droplet"></i><span>Λιπαντικα</span></a></li>
+                    <li><a href="category.html?cat=36-masouria"><i class="bi bi-rulers"></i><span>Μασουρια</span></a></li>
+                    <li><a href="category.html?cat=50-μπιελες"><i class="bi bi-slash-lg"></i><span>Μπιελες</span></a></li>
+                    <li><a href="category.html?cat=67-blok"><i class="bi bi-bounding-box"></i><span>Μπλοκ</span></a></li>
+                    <li><a href="category.html?cat=33-odigi"><i class="bi bi-signpost"></i><span>Οδηγοι</span></a></li>
+                    <li><a href="category.html?cat=60-pirofouskes"><i class="bi bi-fire"></i><span>Πυροφουσκες</span></a></li>
+                    <li><a href="category.html?cat=43-set-xronismou"><i class="bi bi-clock-history"></i><span>Σετ Χρονισμου</span></a></li>
+                    <li><a href="category.html?cat=62-σμυριδαλοιφες"><i class="bi bi-brush"></i><span>Σμυριδαλοιφες</span></a></li>
+                    <li><a href="category.html?cat=39-spri"><i class="bi bi-wind"></i><span>Σπρει</span></a></li>
+                    <li><a href="category.html?cat=49-strofali"><i class="bi bi-arrow-left-right"></i><span>Στροφαλοι</span></a></li>
+                    <li><a href="category.html?cat=52-tapes"><i class="bi bi-circle-half"></i><span>Ταπες</span></a></li>
+                    <li><a href="category.html?cat=66-tsimouxes"><i class="bi bi-circle-dashed"></i><span>Τσιμουχες</span></a></li>
+                    <li><a href="category.html?cat=51-tsimouxakia"><i class="bi bi-circle-square"></i><span>Τσιμουχακια</span></a></li>
+                    <li><a href="category.html?cat=56-flantzes"><i class="bi bi-square"></i><span>Φλαντζες</span></a></li>
+                    <li><a href="category.html?cat=37-xitonia"><i class="bi bi-archive"></i><span>Χιτωνια</span></a></li>
+                    <li><a href="category.html?cat=46-ostiria"><i class="bi bi-pushpin"></i><span>Ωστηρια</span></a></li>
+            </ul>
+            <a href="category.html?cat=53-kapakia" class="btn-accent">Όλα τα προϊόντα</a>
+          </aside>
+        </div>
+        <div class="col-lg-9">
+          <div class="pv-tabs" role="tablist">
+            <button class="nav-link active" id="tab-featured-btn" data-bs-toggle="tab"
+                    data-bs-target="#tab-featured" type="button" role="tab" aria-selected="true">Προτεινόμενα</button>
+            <button class="nav-link" id="tab-new-btn" data-bs-toggle="tab"
+                    data-bs-target="#tab-new" type="button" role="tab" aria-selected="false">Νέα προϊόντα</button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab-featured" role="tabpanel" aria-labelledby="tab-featured-btn">
+              <div class="product-grid">
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/kapakia-china-z13dtj-01.jpg" alt="ΚΑΠΑΚΙΑ CHINA FI-Z13DTJ ΓΙΑ FIAT 16V Z13DTJ OE: 71739601" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">CHINA</div>
+              <h3 class="pc-title"><a href="product.html">ΚΑΠΑΚΙΑ CHINA FI-Z13DTJ ΓΙΑ FIAT 16V Z13DTJ OE: 71739601</a></h3>
+              <div class="pc-stock"><span class="dot dot-warn"></span><span class="stock-warn">Τελευταία προϊόντα σε απόθεμα</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="pc-old">496,00 €</span><span class="price-line"><span class="pc-new">421,60 €</span><span class="badge-discount">-15%</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/ergalia-01.jpg" alt="ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000316001 ΓΙΑ PISTON RING PLIERS 50mm - 110mm OE: -" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">KOLBENSCHMIDT</div>
+              <h3 class="pc-title"><a href="product.html">ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000316001 ΓΙΑ PISTON RING PLIERS 50mm - 110mm OE: -</a></h3>
+              <div class="pc-stock"><span class="dot dot-warn"></span><span class="stock-warn">Τελευταία προϊόντα σε απόθεμα</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="price-line"><span class="pc-new">38,15 €</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/ergalia-02.jpg" alt="ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000217001 ΓΙΑ FEELER GAUGE 0.05-1.00 OE: -" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">KOLBENSCHMIDT</div>
+              <h3 class="pc-title"><a href="product.html">ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000217001 ΓΙΑ FEELER GAUGE 0.05-1.00 OE: -</a></h3>
+              <div class="pc-stock"><span class="dot dot-success"></span><span class="stock-success">Άμεσα Διαθέσιμο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="price-line"><span class="pc-new">15,26 €</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/ergalia-03.jpg" alt="ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000417001 ΓΙΑ STRIPE FOR MEASURING BEARINGS PLASTIC GAUGE OE: -" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">KOLBENSCHMIDT</div>
+              <h3 class="pc-title"><a href="product.html">ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000417001 ΓΙΑ STRIPE FOR MEASURING BEARINGS PLASTIC GAUGE OE: -</a></h3>
+              <div class="pc-stock"><span class="dot dot-success"></span><span class="stock-success">Άμεσα Διαθέσιμο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="price-line"><span class="pc-new">19,07 €</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/ergalia-04.jpg" alt="ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000317002 ΓΙΑ DIAL GAUGE OE: -" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">KOLBENSCHMIDT</div>
+              <h3 class="pc-title"><a href="product.html">ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000317002 ΓΙΑ DIAL GAUGE OE: -</a></h3>
+              <div class="pc-stock"><span class="dot dot-warn"></span><span class="stock-warn">Τελευταία προϊόντα σε απόθεμα</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="price-line"><span class="pc-new">76,31 €</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/ergalia-05.jpg" alt="ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000317001 ΓΙΑ MEASURING BRIDGE 94/134/174 OE: -" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">KOLBENSCHMIDT</div>
+              <h3 class="pc-title"><a href="product.html">ΕΡΓΑΛΕΙΑ KOLBENSCHMIDT 120000317001 ΓΙΑ MEASURING BRIDGE 94/134/174 OE: -</a></h3>
+              <div class="pc-stock"><span class="dot dot-success"></span><span class="stock-success">Άμεσα Διαθέσιμο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="price-line"><span class="pc-new">124 €</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tab-new" role="tabpanel" aria-labelledby="tab-new-btn">
+              <div class="product-grid">
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/kapakia-china-z13dtj-01.jpg" alt="ΚΑΠΑΚΙΑ AMC 908343 ΓΙΑ FIAT 8V 176B7 176A3 176A5 146D7 OE: 7781347" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">AMC</div>
+              <h3 class="pc-title"><a href="product.html">ΚΑΠΑΚΙΑ AMC 908343 ΓΙΑ FIAT 8V 176B7 176A3 176A5 146D7 OE: 7781347</a></h3>
+              <div class="pc-stock"><span class="dot dot-danger"></span><span class="stock-danger">Εξαντλημένο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="pc-old">934,77 €</span><span class="price-line"><span class="pc-new">794,56 €</span><span class="badge-discount">-15%</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/kapakia-china-z13dtj-01.jpg" alt="ΚΑΠΑΚΙΑ AMC 908581 ΓΙΑ FIAT 8V 188A3 188A2 223A6 OE: 46527330" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">AMC</div>
+              <h3 class="pc-title"><a href="product.html">ΚΑΠΑΚΙΑ AMC 908581 ΓΙΑ FIAT 8V 188A3 188A2 223A6 OE: 46527330</a></h3>
+              <div class="pc-stock"><span class="dot dot-warn"></span><span class="stock-warn">Τελευταία προϊόντα σε απόθεμα</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="pc-old">1.001,54 €</span><span class="price-line"><span class="pc-new">851,31 €</span><span class="badge-discount">-15%</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/kapakia-china-z13dtj-01.jpg" alt="ΚΑΠΑΚΙΑ CHINA MR-602/INJ ΓΙΑ MERCEDES 10V 602 980/981/982 (INJECT.) OE: 6020108520" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">CHINA</div>
+              <h3 class="pc-title"><a href="product.html">ΚΑΠΑΚΙΑ CHINA MR-602/INJ ΓΙΑ MERCEDES 10V 602 980/981/982 (INJECT.) OE: 6020108520</a></h3>
+              <div class="pc-stock"><span class="dot dot-success"></span><span class="stock-success">Άμεσα Διαθέσιμο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="pc-old">915,69 €</span><span class="price-line"><span class="pc-new">778,34 €</span><span class="badge-discount">-15%</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/kapakia-china-z13dtj-01.jpg" alt="ΚΑΠΑΚΙΑ CHINA MR-274 ΓΙΑ MERCEDES 16V 274 OE: 2740107104" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">CHINA</div>
+              <h3 class="pc-title"><a href="product.html">ΚΑΠΑΚΙΑ CHINA MR-274 ΓΙΑ MERCEDES 16V 274 OE: 2740107104</a></h3>
+              <div class="pc-stock"><span class="dot dot-success"></span><span class="stock-success">Άμεσα Διαθέσιμο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="pc-old">1.106,46 €</span><span class="price-line"><span class="pc-new">940,49 €</span><span class="badge-discount">-15%</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <a class="pc-media" href="product.html">
+              <img src="assets/img/products/kapakia-china-z13dtj-01.jpg" alt="ΚΑΠΑΚΙΑ CHINA AD-AAB ΓΙΑ AUDI/VW 10V AAB (YDR.OST.) OE: 074103351A" loading="lazy">
+            </a>
+            <div class="pc-body">
+              <div class="pc-brand">CHINA</div>
+              <h3 class="pc-title"><a href="product.html">ΚΑΠΑΚΙΑ CHINA AD-AAB ΓΙΑ AUDI/VW 10V AAB (YDR.OST.) OE: 074103351A</a></h3>
+              <div class="pc-stock"><span class="dot dot-success"></span><span class="stock-success">Άμεσα Διαθέσιμο</span></div>
+              <div class="pc-footer">
+                <div class="pc-prices"><span class="pc-old">572,31 €</span><span class="price-line"><span class="pc-new">486,46 €</span><span class="badge-discount">-15%</span></span></div>
+                <div class="pc-actions">
+                  <button class="icon-btn" type="button" aria-label="Λίστα επιθυμιών"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn" type="button" aria-label="Προσθήκη στο καλάθι"><i class="bi bi-cart2"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+    <div class="container">
+      <div class="info-banners">
+        <div class="info-banner">
+          <div class="ph">BANNER — 426×128</div>
+          <div class="ib-body">
+            <span class="ib-icon"><i class="bi bi-truck"></i></span>
+            <h3>Άμεση αποστολή στο χώρο σου</h3>
+            <p>Παράδοση σε όλη την Ελλάδα με courier</p>
+          </div>
+        </div>
+        <div class="info-banner">
+          <div class="ph">BANNER — 426×128</div>
+          <div class="ib-body">
+            <span class="ib-icon"><i class="bi bi-telephone"></i></span>
+            <h3>Τηλεφωνική εξυπηρέτηση 210 3472222</h3>
+            <p>Δευτέρα-Παρασκευή, 08:00-17:00</p>
+          </div>
+        </div>
+        <div class="info-banner">
+          <div class="ph">BANNER — 426×128</div>
+          <div class="ib-body">
+            <span class="ib-icon"><i class="bi bi-award"></i></span>
+            <h3>50 χρόνια εμπειρίας στα ανταλλακτικά</h3>
+            <p>Από το 1974 δίπλα στους τεχνικούς</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- FOOTER — κοινό σε όλες τις σελίδες (αντιγράφεται αυτούσιο από partials/footer.html) -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/img/logo/malliris-logo.jpg" alt="Malliris.gr">
+        </div>
+        <p class="footer-about">Ανταλλακτικά κινητήρων αυτοκινήτου από το 1974.
+          Εβδομαδιαίες παραλαβές, μεγάλο στοκ και άριστη ποιότητα σε κάθε παραγγελία.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Προϊόντα</h4>
+        <ul>
+            <li><a href="https://www.malliris.gr/el/42-antlies-ladiou" target="_blank" rel="noopener">Αντλιες Λαδιου</a></li>
+            <li><a href="https://www.malliris.gr/el/32-valvides" target="_blank" rel="noopener">Βαλβιδες</a></li>
+            <li><a href="https://www.malliris.gr/el/55-vides" target="_blank" rel="noopener">Βιδες</a></li>
+            <li><a href="https://www.malliris.gr/el/41-edres" target="_blank" rel="noopener">Εδρες</a></li>
+            <li><a href="https://www.malliris.gr/el/44-εκκεντροφοροι" target="_blank" rel="noopener">Εκκεντροφοροι</a></li>
+            <li><a href="https://www.malliris.gr/el/38-elatiria" target="_blank" rel="noopener">Ελατηρια</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Εταιρεία</h4>
+        <ul>
+          <li><a href="#">Η Εταιρεία</a></li>
+          <li><a href="#">Οι εγκαταστάσεις μας</a></li>
+          <li><a href="#">Πιστοποιήσεις</a></li>
+          <li><a href="#">Νέα &amp; προσφορές</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Εξυπηρέτηση</h4>
+        <ul>
+          <li><a href="#">Επικοινωνία</a></li>
+          <li><a href="#">Αποστολές &amp; παραδόσεις</a></li>
+          <li><a href="#">Επιστροφές προϊόντων</a></li>
+          <li><a href="#">Συχνές ερωτήσεις</a></li>
+        </ul>
+        <div class="footer-contact" style="margin-top:16px">
+          <span><i class="bi bi-telephone"></i>210 3472222</span>
+          <span><i class="bi bi-geo-alt"></i>Κορυτσάς 5, Βοτανικός, 10447 Αθήνα</span>
+          <span><i class="bi bi-clock"></i>Δευτέρα-Παρασκευή 08:00-17:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Ανταλλακτικά Μαλλίρης. Όλα τα δικαιώματα διατηρούνται.</span>
+      <span class="footer-pay">Αντικαταβολή · Πιστωτική · Κατάθεση · Τιμολόγιο</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
